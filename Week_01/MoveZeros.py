@@ -14,7 +14,7 @@ class Solusion:
     #     print(nums)    
 
 
-     # 第二种方法
+     # 第二种方法 (增加了一个新数组，不用也行)
     def moveZerosTwo(self, nums: List[int]) -> None:
         tempNums = []
         for i in range(0, len(nums)):
@@ -26,5 +26,5 @@ class Solusion:
 
 
 a = Solusion()
-# a.moveZeroes([1,0,0,4,0,5,0,3])
+a.moveZeroes([1,0,0,4,0,5,0,3])
 a.moveZerosTwo([1,0,0,4,0,5,0,3])
