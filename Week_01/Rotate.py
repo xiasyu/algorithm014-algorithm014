@@ -1,3 +1,4 @@
+# [189.旋转数组 (第三种方式没有看懂)](https://leetcode-cn.com/problems/rotate-array/)
 class Solution:
     from typing import List
     # 这个方法耗时
@@ -44,10 +45,8 @@ class Solution:
                 prev = temp
                 current = next
                 count += 1
-                print(nums)   
                 if start == current:
                     break
-            
         return nums
 
 

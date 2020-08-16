@@ -11,6 +11,17 @@
 [toc]
 # 算法训练营
 ## 第一周
+### 感想
+#### 算法训练营一周感想
+    我进入算法训练营学习算法的目标比较明确，就是想学习一种不同于普通程序员的东西，在我接触算法以前，我的脑子里就有两种程序员：懂算法的程序员和不懂算法的程序员。有点类似于小怪和boss😄
+    算上体验课，在算法训练营待了两周了，到现在给我的感觉就是：累，难，过后倍儿有成就感。
+    昨天之前还好，当我遭遇到“柱状图中最大的矩形”这道题目的时候，暴力解法我瞬间理解，总以为自己聪明，当我试着去理解“单调栈+常数优化”的算法时，我瞬间懵逼，仿佛我站在一维空间仰视二维空间里的不知名生物一样，这都是些啥，一步一步栈进栈出，一步一步数据的复杂调用，目不转睛的看了两个小时我终于弄清楚了这个算法栈结构的调用过程，当我尝试阅读代码的时候，我再次陷入了懵逼状态，我的天，这是啥，我脑海中理解的复杂结构的代码，你竟然三言两语就给我搞完了，俗话说浓缩的都是精华，但是精华里包含的东西，我实在是看不透啊。于是我一遍一遍在脑海里浮现数组的栈入栈出过程，一遍又一遍，直到又过了两个小时......还是没搞懂。不甘心的我趴在了床上，脑子好像慢慢的变得清醒。脑子里立马将代码和图的移动过程结合了起来，right数组存储右边界，left数组存储左边界，mono_stack是栈入栈出的过程，我的脑海里将数据结构和图的移动联系起来，大脑又开始高速运转，通了😄
+    我终于明白了，不是因为我突然变得聪明了，是因为我对数据记忆已经非常深刻，对图的移动逻辑也理解的比较透彻，所以在我高强度牺牲脑细胞的前提下，思路慢慢的融会贯通了。于是我总结了这几个克服困难算法的过程
+    1、10分钟看不懂立马看题解
+    2、题解看不懂，说明这个问题你没有接触过，死背数据，死记图或者数据的移动流程，在大脑里一遍遍的过数据交换的思路
+    3、懂不是一个结果，是一个过程，等你真正的记住了数据交换流程，思路自己就清晰起来，一点就通的情况会有，那是在你的知识储备非常丰富的时候，或者说你的算法底子非常好的时候。如果不是，你就把这道题的数据交换过程背到滚瓜烂熟。用一个特例来走过程。
+    4、五毒神掌，不会做的题，看完题解，明白了之后，总会忘。脑子这个东西，真的是有保质期的。
+    5.用到生活中的事例中去，去强化你对算法的理解，一定要在你没忘记这道题的思路之前，深刻的强化他。
 ### 第一节课
 #### 学习算法的方式
 1.不用看书（算法导论也不用看，书和资料在于精不在于多）
@@ -418,6 +429,182 @@ a = Solution()
 print(a.threeSums([1,2,3,-4]))
 print(a.threeSumSort([1,2,3,-4]))
 ```
+##### [21.合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
+```
+# 定义一个节点
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
 
+# 定义一个单链表
+class LinkList:
+    def __init__(self):
+        self.head = None
+
+    def initList(self,data) -> ListNode:
+        #创建头节点
+        self.head = ListNode(data[0])
+        r = self.head
+        p = self.head
+        # 逐个为data内的数据创建节点，建立链表
+        for i in data[1:]:
+            node = ListNode(i)
+            p.next = node
+            p = p.next
+        return  r
+
+    # 输出一个链表
+    def printList(self, head: ListNode):
+        if head == None:
+            return
+        node = head
+        while node:
+            print(node.val)
+            node = node.next
+
+    # 1、 合并两个有序链表 (使用迭代)
+    def mergeTwoListsIteration(self, l1: ListNode, l2: ListNode) -> ListNode:
+        dummy = ListNode(-1)
+        prev_node = dummy
+        while (l1 is not None) & (l2 is not None):
+            if l1.val < l2.val:
+                prev_node.next = l1
+                l1 = l1.next
+            else:
+                prev_node.next = l2
+                l2 = l2.next
+            prev_node = prev_node.next
+        if l1 is not None:
+            prev_node.next = l1
+        else:
+            prev_node.next = l2
+
+        return dummy.next
+
+
+    # 2、使用递归
+    def mergeTwoListsRecursion(self, l1: ListNode, l2: ListNode) -> ListNode:
+        if l1 is None:
+            return l2
+        elif l2 is None:
+            return l1
+        elif l1.val < l2.val:
+            l1.next = self.mergeTwoListsRecursion(l1.next,l2)
+            return l1
+        else:
+            l2.next = self.mergeTwoListsRecursion(l1,l2.next)
+            return l2
+# 初始化链表
+l1 = LinkList()
+# 创建一个链表
+l1.initList([1,3,5,7,9])
+
+# # 输出一个链表
+# l1.printList(l1.head)
+
+
+# 初始化第二个链表
+l2 = LinkList()
+# 创建第二个链表
+l2.initList([2,4,6,8,10])
+
+# # 输出第二个个链表
+# l2.printList(l2.head)
+
+# 迭代合并链表
+mergeLinkList = LinkList()
+# printMergeLinkList1 = mergeLinkList.mergeTwoListsIteration(l1.head,l2.head)
+# mergeLinkList.printList(printMergeLinkList1)
+
+# 递归合并链表
+printMergeLinkList2 = mergeLinkList.mergeTwoListsRecursion(l1.head,l2.head)
+mergeLinkList.printList(printMergeLinkList2)
+```
+
+##### [88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
+```
+class Solution:
+    def __init__(self):
+        pass
+
+    from  typing import List
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        p = m + n - 1
+        p1 = m - 1
+        p2 = n - 1
+        while p1 >= 0 and p2 >= 0:
+
+            if nums1[p1] < nums2[p2]:
+                nums1[p] = nums2[p2]
+                p2 -= 1
+            else:
+                nums1[p] = nums1[p1]
+                p1 -= 1
+            p -= 1
+        nums1[:p2 + 1] = nums2[:p2 + 1]
+
+        print(nums1)
+
+a = Solution()
+a.merge([2,3,7,8,0,0,0],4,[1,3,6],3)
+```
+
+##### [20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)
+
+##### [155. 最小栈](https://leetcode-cn.com/problems/min-stack/)
+##### [84. 柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)
+```
+ # 暴力求解 1
+    def largestRectangleArea(self, heights: List[int]) -> int:
+        ans = 0
+        n = len(heights)
+        for i in range(len(heights)):
+            height = heights[i]
+            left = i
+            right = i
+            while (left - 1 >= 0) and (heights[left - 1] >= height):
+                left -= 1
+            while (right + 1 < n) and (heights[right + 1] >= height):
+                right += 1
+            ans = max(ans,height * (right - left + 1))
+        return ans
+  # 单调栈 + 常数优化
+    def largestRectangleArea(self, heights: List[int]) -> int:
+        n = len(heights)
+        left, right = [0] * n, [n] * n
+
+        mono_stack = list()
+        for i in range(n):
+            while mono_stack and heights[mono_stack[-1]] >= heights[i]:
+                right[mono_stack[-1]] = i
+                mono_stack.pop()
+            left[i] = mono_stack[-1] if mono_stack else -1
+
+            mono_stack.append(i)
+        # print(left, right, mono_stack)
+
+        ans = max((right[i] - left[i] - 1) * heights[i] for i in range(n)) if n > 0 else 0
+
+        return ans      
+        
+```
+##### [239. 滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/)
+#### 栈和队列
+1.Stack、Queue、Deque的原理和操作复杂度
+2.PriorityQueue的特点和操作复杂度
+3.查询Stack、Queuq、Deque、PriorityQueue的系统接口方法
+4.作业：用新的代码写一遍这个代码
+![-w1238](media/15969752147669/15973765968957.jpg)
+5.priority queue
+6.python soruce code stack 搜索方式
+7.vector
+8.时间复杂度
+![-w1215](media/15969752147669/15973778332743.jpg)
+9.[python 的 heapq](https://docs.python.org/2/library/heapq.html)
+10.[高性能的container库](https://docs.python.org/2/library/collections.html)
+11.最近相关性的都可以用栈来解决，先来后到也是一样
+12.[20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)
+13.
 
    
