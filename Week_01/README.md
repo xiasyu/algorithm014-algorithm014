@@ -12,16 +12,24 @@
 &emsp;&emsp;&emsp;<a href="#10">涉及到的算法题</a>  
 &emsp;&emsp;&emsp;<a href="#11">代码 </a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#12">[70.爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#16">LRUCatch</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#17">[66.加一](https://leetcode-cn.com/problems/plus-one/)</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#20">[283.移动零](https://leetcode-cn.com/problems/move-zeroes/)</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#32">[26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#35">[1.两数之和](https://leetcode-cn.com/problems/two-sum/)</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#40">[11.盛水最多容器](https://leetcode-cn.com/problems/container-with-most-water/)</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#41">[189.旋转数组 (第三种方式没有看懂)](https://leetcode-cn.com/problems/rotate-array/)</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#47">[24.两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#48">[15.三数之和](https://leetcode-cn.com/problems/3sum/)</a>    
-&emsp;&emsp;&emsp;&emsp;<a href="#50">[21.合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#13">LRUCatch</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#14">[66.加一](https://leetcode-cn.com/problems/plus-one/)</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#15">[283.移动零](https://leetcode-cn.com/problems/move-zeroes/)</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#16">[26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#17">[1.两数之和](https://leetcode-cn.com/problems/two-sum/)</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#18">[11.盛水最多容器](https://leetcode-cn.com/problems/container-with-most-water/)</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#19">[189.旋转数组 (第三种方式没有看懂)](https://leetcode-cn.com/problems/rotate-array/)</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#20">[24.两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#21">[15.三数之和](https://leetcode-cn.com/problems/3sum/)</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#22">[21.合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)</a>    
+&emsp;&emsp;&emsp;&emsp;<a href="#24">[88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#25">[20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#26">[155. 最小栈](https://leetcode-cn.com/problems/min-stack/)</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#27">[84. 柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#28">[239. 滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/)</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#29">[641. 设计循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/)</a>  
+&emsp;&emsp;&emsp;<a href="#30">栈和队列</a>  
+
 # <a name="0">算法训练营</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ## <a name="1">第一周</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ### <a name="2">感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
@@ -35,6 +43,7 @@
     3、懂不是一个结果，是一个过程，等你真正的记住了数据交换流程，思路自己就清晰起来，一点就通的情况会有，那是在你的知识储备非常丰富的时候，或者说你的算法底子非常好的时候。如果不是，你就把这道题的数据交换过程背到滚瓜烂熟。用一个特例来走过程。
     4、五毒神掌，不会做的题，看完题解，明白了之后，总会忘。脑子这个东西，真的是有保质期的。
     5.用到生活中的事例中去，去强化你对算法的理解，一定要在你没忘记这道题的思路之前，深刻的强化他。
+    6.最重要的一点：一定不能拖，不能拖。浪费的时间早晚都要补回来，补不回来就真的失去了💔
 ### <a name="4">第一节课</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 #### <a name="5">学习算法的方式</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 1.不用看书（算法导论也不用看，书和资料在于精不在于多）
@@ -120,7 +129,7 @@ n指的是搜索空间里的节点总数
 ```
 1.爬楼梯
 class Solution:
-    # <a name="13">方法一  递归</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+     方法一  递归
     def climbStairs(n: int) -> int:
        dp = {}
        dp[1] = 1
@@ -129,7 +138,7 @@ class Solution:
            dp[i] = dp[i - 1] + dp[i - 2]
        return dp[n]
 
-        # <a name="14">方法二 动态规划</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+         方法二 动态规划
     def ClimbStairsDyanmic(n:int) -> int: 
 
         p = 0
@@ -150,7 +159,7 @@ class Solution:
     def __init__(self):
         pass
 
-    # <a name="15">方法三 递归缓存</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+    方法三 递归缓存
     def climbStairs(self, n: int) -> int:
         return self.ClimbStarirsCatch(n, [0] * (n + 1))
 
@@ -171,10 +180,10 @@ class Solution:
 a = Solution()
 print( " \l楼梯 =", a.climbStairs(3))
 ```
-##### <a name="16">LRUCatch</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="13">LRUCatch</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 ```   
-##### <a name="17">[66.加一](https://leetcode-cn.com/problems/plus-one/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="14">[66.加一](https://leetcode-cn.com/problems/plus-one/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 
 class Solution:
@@ -183,7 +192,7 @@ class Solution:
           pass
     from typing import List
 
-    # <a name="18">方法一</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+     方法一
     def plusOne(self, digits: List[int]) -> List[int]:
         temp = 1
         for i in range(0, digits.__len__())[::-1]:
@@ -198,7 +207,7 @@ class Solution:
             return tempDigits
         return digits
         
-    #方法二
+    方法二
     def plusOneTwo(self, digits: List[int]) -> List[int]:
         for i in range(0, digits.__len__())[::-1]:
             if digits[i] != 9:
@@ -210,7 +219,7 @@ class Solution:
         temoDigits[0] = 1
         return temoDigits   
 
-     # <a name="19">方法三</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+      方法三
     def plusOneThree(self, digits: List[int]) -> List[int]:
         for i in range(0, digits.__len__())[::-1]:
             if digits[i] == 9:
@@ -229,25 +238,25 @@ print(a.plusOneTwo([9,9,9]))
 print(a.plusOneThree([9,9,9]))
 ```
 
-##### <a name="20">[283.移动零](https://leetcode-cn.com/problems/move-zeroes/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="15">[283.移动零](https://leetcode-cn.com/problems/move-zeroes/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 class Solusion:
     def __init__(self):
         pass
-    # <a name="21">第一种方法</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+     第一种方法
     from typing import List
-    # <a name="22">def moveZeroes(self, nums: List[int]) -> None:</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-    # <a name="23">    i = 0</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-    # <a name="24">    for j in range(0, len(nums)):</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-    # <a name="25">        if nums[j] != 0:</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-    # <a name="26">            nums[i] = nums[j]</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-    # <a name="27">            i += 1</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-    # <a name="28">    for a in range( i, len(nums)):</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-    # <a name="29">        nums[a] = 0       </a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-    # <a name="30">    print(nums)    </a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+     def moveZeroes(self, nums: List[int]) -> None:
+         i = 0
+         for j in range(0, len(nums)):
+             if nums[j] != 0:
+                 nums[i] = nums[j]
+                 i += 1
+         for a in range( i, len(nums)):
+             nums[a] = 0       
+         print(nums)    
 
 
-     # <a name="31">第二种方法 (增加了一个新数组，不用也行)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+      第二种方法 (增加了一个新数组，不用也行)
     def moveZerosTwo(self, nums: List[int]) -> None:
         tempNums = []
         for i in range(0, len(nums)):
@@ -262,15 +271,15 @@ a = Solusion()
 a.moveZeroes([1,0,0,4,0,5,0,3])
 a.moveZerosTwo([1,0,0,4,0,5,0,3])
 ```
-##### <a name="32">[26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="16">[26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 class Solution:
     from typing import List
-    # <a name="33">第一种解法</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+     第一种解法
     def removeDuplicates(self, nums: List[int]) -> int:
         j = 0
         for i in range(1, len(nums)):
-            # <a name="34">不等的时候将i的值存储到 ++j上</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+             不等的时候将i的值存储到 ++j上
             if nums[i] != nums[j]:
                 j += 1
                 nums[j] = nums[i] 
@@ -280,14 +289,14 @@ a = Solution()
 print(a.removeDuplicates([1,1,2,3,4,4,5]))
 ```
 
-##### <a name="35">[1.两数之和](https://leetcode-cn.com/problems/two-sum/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="17">[1.两数之和](https://leetcode-cn.com/problems/two-sum/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 class Solution:
     def __init__(self):
         pass
 
     from typing import List
-    # <a name="36">第一种方式 o(n^2)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+     第一种方式 o(n^2)
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         different = []
         for i in range(0, len(nums)):
@@ -300,7 +309,7 @@ class Solution:
         return [0,0]     
 
      
-     # <a name="37">第二种方式 遍历法</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+      第二种方式 遍历法
     def twoSumTwo(self, nums: List[int], target: int) -> List[int]:          
         for i in range(0, len(nums)):
             for j in range(i + 1, len(nums)):
@@ -308,7 +317,7 @@ class Solution:
                     return [i, j]
         return [0,0]
     
-    # <a name="38">第三种方式 hash方式实现</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+    第三种方式 hash方式实现
     def twoSumHash(self, nums: List[int], target: int) -> List[int]:
         tempdict = {}
         for i in range(0, len(nums)):
@@ -319,7 +328,7 @@ class Solution:
                 return [i, tempdict[value]]
         return [0,0]  
 
-    # <a name="39">第四种方式 哈希方式 不是很好理解 （这个方式的理解，可以理解为 原始序列和差的map是逆序的，相当，一定存在一前一后的问题。一个的出现必定在另一个的后面）</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+     第四种方式 哈希方式 不是很好理解 （这个方式的理解，可以理解为 原始序列和差的map是逆序的，相当，一定存在一前一后的问题。一个的出现必定在另一个的后面）
     def twoSumHashTwo(self, nums: List[int], target: int) -> List[int]:
         tempHash = {}
         for i in range(0, len(nums)):
@@ -334,7 +343,7 @@ a = Solution()
 print(a.twoSumHash([3,4,11,5],8))
 ```
 
-##### <a name="40">[11.盛水最多容器](https://leetcode-cn.com/problems/container-with-most-water/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="18">[11.盛水最多容器](https://leetcode-cn.com/problems/container-with-most-water/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 class Solution:
     from typing import List
@@ -356,11 +365,11 @@ a = Solution()
 print(a.maxArea([1,3,5,2,9]))
 ```
 
-##### <a name="41">[189.旋转数组 (第三种方式没有看懂)](https://leetcode-cn.com/problems/rotate-array/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="19">[189.旋转数组 (第三种方式没有看懂)](https://leetcode-cn.com/problems/rotate-array/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 class Solution:
     from typing import List
-    # <a name="42">这个方法耗时</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+     这个方法耗时
     def rotate(self, nums: List[int], k: int) -> List[int]:
         k = k % len(nums)
         if k >= len(nums):
@@ -387,8 +396,8 @@ class Solution:
                 previpus = temp
         return nums
 
-    # <a name="43">第三种解法： 使用环状替换</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-    # <a name="44">思路：因为</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+     第三种解法： 使用环状替换
+     思路：因为
     def rotateThree(self, nums: List[int], k: int) -> List[int]:
         k = k % len(nums)
         count = 0
@@ -410,12 +419,12 @@ class Solution:
 
 
 a = Solution()
-# <a name="45">print(a.rotate([1,2,3,4,5],4))</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-# <a name="46">print(a.rotateTwo([1,2,3,4,5],2),'\n')</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+ print(a.rotate([1,2,3,4,5],4))
+ print(a.rotateTwo([1,2,3,4,5],2),'\n')
 print(a.rotateThree([1,2,3,4,5,6],2))
 ```
 
-##### <a name="47">[24.两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="20">[24.两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 class Solution:
     def swapPairs(self, head: ListNode) -> ListNode:
@@ -437,14 +446,14 @@ class Solution:
         return dummy.next
 ```
 
-##### <a name="48">[15.三数之和](https://leetcode-cn.com/problems/3sum/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="21">[15.三数之和](https://leetcode-cn.com/problems/3sum/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 class Solution:
     def __init__(self):
         pass
 
     from typing import List
-    #第一种做法：暴力
+    第一种做法：暴力
     def threeSums(self, nums: List[int]) -> List[int]:
         for i in range(0, len(nums)):
             for j in range(i + 1, len(nums)):
@@ -453,7 +462,7 @@ class Solution:
                         return [i, j, k]
 
 
-    # <a name="49">第二种做法：双指针法</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+     第二种做法：双指针法
     def threeSumSort(self, nums: List[int]) -> List[int]:
         nums.sort()
         ans = []
@@ -481,15 +490,15 @@ a = Solution()
 print(a.threeSums([1,2,3,-4]))
 print(a.threeSumSort([1,2,3,-4]))
 ```
-##### <a name="50">[21.合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="22">[21.合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
-# <a name="51">定义一个节点</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+ 定义一个节点
 class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
 
-# <a name="52">定义一个单链表</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+ 定义一个单链表
 class LinkList:
     def __init__(self):
         self.head = None
@@ -499,14 +508,14 @@ class LinkList:
         self.head = ListNode(data[0])
         r = self.head
         p = self.head
-        # <a name="53">逐个为data内的数据创建节点，建立链表</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+        # <a name="23">逐个为data内的数据创建节点，建立链表</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
         for i in data[1:]:
             node = ListNode(i)
             p.next = node
             p = p.next
         return  r
 
-    # <a name="54">输出一个链表</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+     输出一个链表
     def printList(self, head: ListNode):
         if head == None:
             return
@@ -515,7 +524,7 @@ class LinkList:
             print(node.val)
             node = node.next
 
-    # <a name="55">1、 合并两个有序链表 (使用迭代)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+     1、 合并两个有序链表 (使用迭代)
     def mergeTwoListsIteration(self, l1: ListNode, l2: ListNode) -> ListNode:
         dummy = ListNode(-1)
         prev_node = dummy
@@ -535,7 +544,7 @@ class LinkList:
         return dummy.next
 
 
-    # <a name="56">2、使用递归</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+     2、使用递归
     def mergeTwoListsRecursion(self, l1: ListNode, l2: ListNode) -> ListNode:
         if l1 is None:
             return l2
@@ -547,34 +556,34 @@ class LinkList:
         else:
             l2.next = self.mergeTwoListsRecursion(l1,l2.next)
             return l2
-# <a name="57">初始化链表</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+ 初始化链表
 l1 = LinkList()
-# <a name="58">创建一个链表</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+ 创建一个链表
 l1.initList([1,3,5,7,9])
 
-# <a name="59"># <a name="59">输出一个链表</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-# <a name="60">l1.printList(l1.head)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+ 输出一个链表
+ l1.printList(l1.head)
 
 
-# <a name="61">初始化第二个链表</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+ 初始化第二个链表
 l2 = LinkList()
-# <a name="62">创建第二个链表</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+ 创建第二个链表
 l2.initList([2,4,6,8,10])
 
-# <a name="63"># <a name="63">输出第二个个链表</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-# <a name="64">l2.printList(l2.head)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+ 输出第二个个链表
+ l2.printList(l2.head)
 
-# <a name="65">迭代合并链表</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+ 迭代合并链表
 mergeLinkList = LinkList()
-# <a name="66">printMergeLinkList1 = mergeLinkList.mergeTwoListsIteration(l1.head,l2.head)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-# <a name="67">mergeLinkList.printList(printMergeLinkList1)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+ printMergeLinkList1 = mergeLinkList.mergeTwoListsIteration(l1.head,l2.head)
+ mergeLinkList.printList(printMergeLinkList1)
 
-# <a name="68">递归合并链表</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+ 递归合并链表
 printMergeLinkList2 = mergeLinkList.mergeTwoListsRecursion(l1.head,l2.head)
 mergeLinkList.printList(printMergeLinkList2)
 ```
 
-##### <a name="69">[88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="24">[88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 class Solution:
     def __init__(self):
@@ -602,12 +611,12 @@ a = Solution()
 a.merge([2,3,7,8,0,0,0],4,[1,3,6],3)
 ```
 
-##### <a name="70">[20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="25">[20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
-##### <a name="71">[155. 最小栈](https://leetcode-cn.com/problems/min-stack/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-##### <a name="72">[84. 柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="26">[155. 最小栈](https://leetcode-cn.com/problems/min-stack/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="27">[84. 柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
- # <a name="73">暴力求解 1</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+  暴力求解 1
     def largestRectangleArea(self, heights: List[int]) -> int:
         ans = 0
         n = len(heights)
@@ -621,7 +630,7 @@ a.merge([2,3,7,8,0,0,0],4,[1,3,6],3)
                 right += 1
             ans = max(ans,height * (right - left + 1))
         return ans
-  # <a name="74">单调栈 + 常数优化</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+   单调栈 + 常数优化
     def largestRectangleArea(self, heights: List[int]) -> int:
         n = len(heights)
         left, right = [0] * n, [n] * n
@@ -634,15 +643,111 @@ a.merge([2,3,7,8,0,0,0],4,[1,3,6],3)
             left[i] = mono_stack[-1] if mono_stack else -1
 
             mono_stack.append(i)
-        # <a name="75">print(left, right, mono_stack)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+         print(left, right, mono_stack)
 
         ans = max((right[i] - left[i] - 1) * heights[i] for i in range(n)) if n > 0 else 0
 
         return ans      
         
 ```
-##### <a name="76">[239. 滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-#### <a name="77">栈和队列</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="28">[239. 滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="29">[641. 设计循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+```
+class MyCircularDeque:
+
+    def __init__(self, k: int):
+        """
+        Initialize your deata sturcture here. Set the size of the deque to be k.
+        """
+        self.front = 0
+        self.rear = 0
+        self.capacity = k + 1
+        self.arr = [0 for _ in range(self.capacity)]
+
+
+    def insertFront(self, value: int) -> bool:
+        """
+        Add an item at the front to Deque. Return true if the operation is  successful.
+        """
+
+        if self.isFull():
+            return False
+        self.front = (self.front - 1 + self.capacity) % self.capacity
+        self.arr[self.front] = value
+        return True
+
+
+    def insertLast(self, value: int) -> bool:
+        """
+         
+        Adds an item at the rear of Deque. Return true if the operation is successful. 
+        """
+        if self.isFull():
+          return False
+        self.arr[self.rear] = value
+        self.rear = (self.rear + 1) % self.capacity
+
+        return True
+
+    def deleteFront(self) -> bool:
+
+        """
+          
+        Deletes an item from the front of Deque. Return true if the operation is successful.
+        """
+        if self.isEmpty():
+          return False
+        self.front = (self.front + 1) % self.capacity
+        return True
+
+
+
+    def deleteLast(self) -> bool:
+        """
+       
+        Deletes an item from the front to Deque. Return true if the operation is successful.
+        """
+        if self.isEmpty():
+            return False
+        self.rear = (self.rear - 1 + self.capacity) % self.capacity
+        return True
+
+    def getFront(self) -> int:
+        """
+        
+        Get the front item from the deque.
+        """
+        if self.isEmpty():
+            return -1
+        return self.arr[self.front]
+
+    def getRear(self) -> int:
+         """
+         
+         Get the last item from the deque.
+         """
+         if self.isEmpty():
+             return -1
+         return self.arr[(self.rear - 1 + self.capacity) % self.capacity]
+
+
+    def isEmpty(self) -> bool:
+        """
+         
+        hecks whether the circular deque is empty or not.
+        """
+        return self.front == self.rear
+
+
+
+    def isFull(self) -> bool:
+        """
+        
+        Checks whether the circular deque is full or not
+        """
+        return (self.rear + 1) % self.capacity == self.front
+ ```
+#### <a name="30">栈和队列</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 1.Stack、Queue、Deque的原理和操作复杂度
 2.PriorityQueue的特点和操作复杂度
 3.查询Stack、Queuq、Deque、PriorityQueue的系统接口方法
