@@ -12,72 +12,16 @@
 &emsp;&emsp;&emsp;<a href="#10">涉及到的算法题</a>  
 &emsp;&emsp;&emsp;<a href="#11">代码 </a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#12">[70.爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)</a>  
-<a href="#13">  # 方法一  递归</a>  
-<a href="#14">      # 方法二 动态规划</a>  
-<a href="#15">  # 方法三 递归缓存</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#16">LRUCatch</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#17">[66.加一](https://leetcode-cn.com/problems/plus-one/)</a>  
-<a href="#18">  # 方法一</a>  
-<a href="#19">   # 方法三</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#20">[283.移动零](https://leetcode-cn.com/problems/move-zeroes/)</a>  
-<a href="#21">  # 第一种方法</a>  
-<a href="#22">  # def moveZeroes(self, nums: List[int]) -> None:</a>  
-<a href="#23">  #     i = 0</a>  
-<a href="#24">  #     for j in range(0, len(nums)):</a>  
-<a href="#25">  #         if nums[j] != 0:</a>  
-<a href="#26">  #             nums[i] = nums[j]</a>  
-<a href="#27">  #             i += 1</a>  
-<a href="#28">  #     for a in range( i, len(nums)):</a>  
-<a href="#29">  #         nums[a] = 0       </a>  
-<a href="#30">  #     print(nums)    </a>  
-<a href="#31">   # 第二种方法 (增加了一个新数组，不用也行)</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#32">[26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)</a>  
-<a href="#33">  # 第一种解法</a>  
-<a href="#34">          # 不等的时候将i的值存储到 ++j上</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#35">[1.两数之和](https://leetcode-cn.com/problems/two-sum/)</a>  
-<a href="#36">  # 第一种方式 o(n^2)</a>  
-<a href="#37">   # 第二种方式 遍历法</a>  
-<a href="#38">  # 第三种方式 hash方式实现</a>  
-<a href="#39">  # 第四种方式 哈希方式 不是很好理解 （这个方式的理解，可以理解为 原始序列和差的map是逆序的，相当，一定存在一前一后的问题。一个的出现必定在另一个的后面）</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#40">[11.盛水最多容器](https://leetcode-cn.com/problems/container-with-most-water/)</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#41">[189.旋转数组 (第三种方式没有看懂)](https://leetcode-cn.com/problems/rotate-array/)</a>  
-<a href="#42">  # 这个方法耗时</a>  
-<a href="#43">  # 第三种解法： 使用环状替换</a>  
-<a href="#44">  # 思路：因为</a>  
-<a href="#45">print(a.rotate([1,2,3,4,5],4))</a>  
-<a href="#46">print(a.rotateTwo([1,2,3,4,5],2),'\n')</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#47">[24.两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#48">[15.三数之和](https://leetcode-cn.com/problems/3sum/)</a>  
-<a href="#49">  # 第二种做法：双指针法</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#48">[15.三数之和](https://leetcode-cn.com/problems/3sum/)</a>    
 &emsp;&emsp;&emsp;&emsp;<a href="#50">[21.合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)</a>  
-<a href="#51">定义一个节点</a>  
-<a href="#52">定义一个单链表</a>  
-<a href="#53">      # 逐个为data内的数据创建节点，建立链表</a>  
-<a href="#54">  # 输出一个链表</a>  
-<a href="#55">  # 1、 合并两个有序链表 (使用迭代)</a>  
-<a href="#56">  # 2、使用递归</a>  
-<a href="#57">初始化链表</a>  
-<a href="#58">创建一个链表</a>  
-<a href="#59"># 输出一个链表</a>  
-<a href="#60">l1.printList(l1.head)</a>  
-<a href="#61">初始化第二个链表</a>  
-<a href="#62">创建第二个链表</a>  
-<a href="#63"># 输出第二个个链表</a>  
-<a href="#64">l2.printList(l2.head)</a>  
-<a href="#65">迭代合并链表</a>  
-<a href="#66">printMergeLinkList1 = mergeLinkList.mergeTwoListsIteration(l1.head,l2.head)</a>  
-<a href="#67">mergeLinkList.printList(printMergeLinkList1)</a>  
-<a href="#68">递归合并链表</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#69">[88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#70">[20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#71">[155. 最小栈](https://leetcode-cn.com/problems/min-stack/)</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#72">[84. 柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)</a>  
-<a href="#73"> 暴力求解 1</a>  
-<a href="#74"># 单调栈 + 常数优化</a>  
-<a href="#75">      # print(left, right, mono_stack)</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#76">[239. 滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/)</a>  
-&emsp;&emsp;&emsp;<a href="#77">栈和队列</a>  
-
 # <a name="0">算法训练营</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ## <a name="1">第一周</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ### <a name="2">感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
