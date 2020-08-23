@@ -25,15 +25,8 @@
 &emsp;&emsp;&emsp;&emsp;<a href="#23">59 滑动窗口的最大值</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#24">94. 二叉树的中序遍历</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#25">258. 各位相加</a>  
-<a href="#26">      # recursion terminator</a>  
-<a href="#27">      # process logic in current level</a>  
-<a href="#28">      # dill down</a>  
-<a href="#29">      # reverse the current level status if needed</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#30">242. 有效的字母异位词</a>  
-<a href="#31">  # nlog(n)</a>  
-<a href="#32">  # o(n) 存储索引</a>  
-<a href="#33">  # o(n)map</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#34">104. 二叉树的最大深度</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#26">242. 有效的字母异位词</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#27">104. 二叉树的最大深度</a>  
 [toc]
 ## <a name="0">算法训练营第二周</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ### <a name="1">感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
@@ -313,17 +306,17 @@ class Solution:
      递归
     def addDigitsRecursion(self, num: int) -> int:
 
-        # <a name="26">recursion terminator</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+         recursion terminator
         if num < 10:
             return num
 
-        # <a name="27">process logic in current level</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+         process logic in current level
         num = num // 10 + num % 10
 
-        # <a name="28">dill down</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+         dill down
         return self.addDigitsRecursion(num)
 
-        # <a name="29">reverse the current level status if needed</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+         reverse the current level status if needed
 
      模9
     def addDigitsMold(self, num: int) -> int:
@@ -333,12 +326,12 @@ a = Solution()
 print(a.addDigitsMold(456))
 
 ```
-##### <a name="30">242. 有效的字母异位词</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="26">242. 有效的字母异位词</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 [242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)
 ```
 import collections
 class Solution:
-    # <a name="31">nlog(n)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+     nlog(n)
     def isAnagram(self, s: str, t: str) -> bool:
         sl = "".join(sorted(list(s)))
         tl = "".join(sorted(list(t)))
@@ -347,7 +340,7 @@ class Solution:
         else:
             return False
 
-    # <a name="32">o(n) 存储索引</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+     o(n) 存储索引
     def isAnagramTwo(self, s: str, t: str) -> bool:
         if len(s) != len(t):
             return False
@@ -360,7 +353,7 @@ class Solution:
                 return False
         return True
 
-    # <a name="33">o(n)map</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+     o(n)map
     def isAnagramThree(self, s: str, t: str) -> bool:
         if len(s) != len(t):
             return False
@@ -378,7 +371,7 @@ class Solution:
 a = Solution()
 print(a.isAnagramThree("werty","wtyer"))
 ```
-##### <a name="34">104. 二叉树的最大深度</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="27">104. 二叉树的最大深度</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
 ```
     def maxDepth(self, root: TreeNode) -> int:
