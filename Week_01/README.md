@@ -21,8 +21,7 @@
 &emsp;&emsp;&emsp;&emsp;<a href="#19">[189.旋转数组 (第三种方式没有看懂)](https://leetcode-cn.com/problems/rotate-array/)</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#20">[24.两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#21">[15.三数之和](https://leetcode-cn.com/problems/3sum/)</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#22">[21.合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)</a>  
-<a href="#23">      # 逐个为data内的数据创建节点，建立链表</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#22">[21.合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)</a>    
 &emsp;&emsp;&emsp;&emsp;<a href="#24">[88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#25">[20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#26">[155. 最小栈](https://leetcode-cn.com/problems/min-stack/)</a>  
