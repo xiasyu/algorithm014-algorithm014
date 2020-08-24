@@ -1,23 +1,23 @@
 <a name="index">**Index**</a>
 &emsp;<a href="#0">算法训练营第二周</a>  
-&emsp;<a href="#1">剩余问题：</a>  
-&emsp;&emsp;<a href="#2">感想</a>  
-&emsp;&emsp;<a href="#3">第一节课</a>  
-&emsp;&emsp;&emsp;<a href="#4">哈希表概念</a>  
-&emsp;&emsp;&emsp;<a href="#5">四件套</a>  
-&emsp;&emsp;&emsp;<a href="#6">二叉树</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#7">概念：</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#8">性质：</a>  
-&emsp;&emsp;&emsp;<a href="#9">满二叉树</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#10">概念：</a>  
-&emsp;&emsp;&emsp;<a href="#11">完全二叉树</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#12">概念：</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#13">性质：</a>  
-&emsp;&emsp;&emsp;<a href="#14">二叉树的存储结构</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#15">二叉树的层序遍历</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#16">非递归</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#17">二叉树的前序遍历</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#18">递归</a>  
+&emsp;&emsp;<a href="#1">感想</a>  
+&emsp;&emsp;<a href="#2">第一节课</a>  
+&emsp;&emsp;&emsp;<a href="#3">哈希表概念</a>  
+&emsp;&emsp;&emsp;<a href="#4">四件套</a>  
+&emsp;&emsp;&emsp;<a href="#5">二叉树</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#6">概念：</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#7">性质：</a>  
+&emsp;&emsp;&emsp;<a href="#8">满二叉树</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#9">概念：</a>  
+&emsp;&emsp;&emsp;<a href="#10">完全二叉树</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#11">概念：</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#12">性质：</a>  
+&emsp;&emsp;&emsp;<a href="#13">二叉树的存储结构</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#14">二叉树的层序遍历</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#15">非递归</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#16">二叉树的前序遍历</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#17">递归</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#18">非递归</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#19">二叉树的中序遍历</a>  
 &emsp;&emsp;&emsp;&emsp;&emsp;<a href="#20">递归 </a>  
 &emsp;&emsp;&emsp;&emsp;&emsp;<a href="#21">非递归 </a>  
@@ -37,52 +37,43 @@
 &emsp;&emsp;&emsp;&emsp;<a href="#35">104. 二叉树的最大深度</a>  
 [toc]
 ## <a name="0">算法训练营第二周</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-## <a name="1">剩余问题：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-```
-1. 第六课中的第二个视品 https://u.geekbang.org/lesson/31?article=259252
-2. 图的概念
-3. 数的前序后续和终须遍历
-4. 快排，大根堆
-5. 三📖之和
-6. 
 
-```
-### <a name="2">感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+### <a name="1">感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 第二周，算法题越来越顺，真正的想把算法题做好，就不要把它当作一个题来做，要把它当作生活中解决问题的工具来考虑，不能任务式编程，就像吃饭睡觉一样，当成一个习惯。
 最大的问题：一定不要拖，不能拖。算法题不是值要脑子转得快，练是最重要的切记
 ```
-### <a name="3">第一节课</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-#### <a name="4">哈希表概念</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+### <a name="2">第一节课</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+#### <a name="3">哈希表概念</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 1. 哈希表（Hash table），也叫散列表，是根据关键码值（Key value) 而直接进行访问的数据结构。
 2. 他通过吧关键码值映射到表中的一个位置来访问记录，以加快查找的速度。
 3. 这个映射函数叫做三裂函数（Hash Function）,存放记录的数组叫做哈希表（或散列表）
 
-#### <a name="5">四件套</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+#### <a name="4">四件套</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 1. clarification (搞清题目)
 2. possible solution --> optimal(time & space) （找最优化方式）
 3. code 
 4. test cases
 
-#### <a name="6">二叉树</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-##### <a name="7">概念：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+#### <a name="5">二叉树</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="6">概念：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 二叉树是n(n>=0)个结点的有限集合，该集合或者为空集（成为空二叉树），或者由一个 根结点和两棵互不相交。分别称为根结点的左子树右子树的二叉树组成。
-##### <a name="8">性质：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="7">性质：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 1. 深度为k的二叉树，最多有 2^k - 1 个结点
 2. 二叉树的第i层最多有 2^(i - 1)个结点
 3. 在一棵二叉树中，如果叶子结点树为N0,度为2的结点数为N2，则有 N0 = N2 + 1
   [推导过程](https://www.bilibili.com/video/BV1D541167LF/?spm_id_from=333.788.videocard.0)
 
-#### <a name="9">满二叉树</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-##### <a name="10">概念：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+#### <a name="8">满二叉树</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="9">概念：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 在一个二叉树中，如果所有的分支节点都存在左子树和右子树，并且所有的叶子结点都在同一层上，这个树就是满二叉树。
 1. 叶子只能出现在最下一层
 2. 只有度为0和度为2的节点
 
-#### <a name="11">完全二叉树</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-##### <a name="12">概念：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+#### <a name="10">完全二叉树</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="11">概念：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 在满二叉树中，从最后一个结点开始，连续去掉任意个结点，即时一棵完全二叉树
-##### <a name="13">性质：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="12">性质：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 1. 叶子结点只能出现在最下两层，且最下层的叶子结点都集中在二叉树的左面
 2. 完全二叉树中如果有度为1的结点，只可能有一个，且该结点只有左孩子
 3. 深度为k的完全二叉树在k-1层上，一定是满二叉树
@@ -92,12 +83,12 @@
    + 结点i的左孩子为2 * i
    + 结点i的右孩子为2 * i + 1
    
-#### <a name="14">二叉树的存储结构</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+#### <a name="13">二叉树的存储结构</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 1. 二叉链表有 n+ 1 个空指针 （2 * n）- (n - 1) 2 * n  是指针个数，n - 1 是边。
 2. 三叉链表（增加了指向双亲的指针）
 
-##### <a name="15">二叉树的层序遍历</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-###### <a name="16">非递归</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="14">二叉树的层序遍历</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="15">非递归</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 伪代码
 ```
 1. 队列Q初始化
@@ -122,8 +113,8 @@ def Bitree(self, root: BitreeNode):
         if q.right:
            queue.append.(q.right)
 ```
-##### <a name="17">二叉树的前序遍历</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-###### <a name="18">递归</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="16">二叉树的前序遍历</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="17">递归</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 伪代码
 ```
 1. 若二叉树的根结点为空，则返回
@@ -142,7 +133,7 @@ def preorder(self, root: BiNode):
       self.preorder(root)
       self.preorder(root)
 ```
-####### 非递归
+###### <a name="18">非递归</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 伪代码
 ```
 1. 将堆栈stack初始化
