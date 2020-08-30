@@ -1,486 +1,414 @@
 <a name="index">**Index**</a>
-&emsp;<a href="#0">算法训练营第二周</a>  
-&emsp;&emsp;<a href="#1">感想</a>  
-&emsp;&emsp;<a href="#2">第一节课</a>  
-&emsp;&emsp;&emsp;<a href="#3">哈希表概念</a>  
-&emsp;&emsp;&emsp;<a href="#4">四件套</a>  
-&emsp;&emsp;&emsp;<a href="#5">二叉树</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#6">概念：</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#7">性质：</a>  
-&emsp;&emsp;&emsp;<a href="#8">满二叉树</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#9">概念：</a>  
-&emsp;&emsp;&emsp;<a href="#10">完全二叉树</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#11">概念：</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#12">性质：</a>  
-&emsp;&emsp;&emsp;<a href="#13">二叉树的存储结构</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#14">二叉树的层序遍历</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#15">非递归</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#16">二叉树的前序遍历</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#17">递归</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#18">非递归</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#19">二叉树的中序遍历</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#20">递归 </a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#21">非递归 </a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#22">二叉树的后续遍历</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#23">递归</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#24">非递归</a>  
-&emsp;&emsp;&emsp;<a href="#25">二叉搜索树的特点</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#26">线索</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#27">线索化</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#28">线索链表</a>  
-&emsp;&emsp;&emsp;<a href="#29">代码</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#30">349.两个数组的交集</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#31">59 滑动窗口的最大值</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#32">94. 二叉树的中序遍历</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#33">258. 各位相加</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#34">242. 有效的字母异位词</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#35">104. 二叉树的最大深度</a>  
-[toc]
-## <a name="0">算法训练营第二周</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-
-### <a name="1">感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+&emsp;<a href="#0">算法第三周</a>  
+&emsp;<a href="#1">感想</a>  
+&emsp;<a href="#2">分治的思想</a>  
+&emsp;<a href="#3">回溯的模版</a>  
+&emsp;<a href="#4">图示</a>  
+&emsp;&emsp;&emsp;<a href="#5">代码</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#6">剑指 Offer 40. 最小的k个数</a>  
+<a href="#7">          # dill down</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#8">49. 字母异位词分组</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#9">剑指 Offer 05. 替换空格</a>  
+<a href="#10">      # s = '20%'.join(s.split(' '))</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#11">剑指 Offer 68 - II. 二叉树的最近公共祖先</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#12">15. 三数之和</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#13">18. 四数之和</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#14">1498. 满足条件的子序列数目</a>  
+## <a name="0">算法第三周</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+## <a name="1">感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+## <a name="2">分治的思想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
-第二周，算法题越来越顺，真正的想把算法题做好，就不要把它当作一个题来做，要把它当作生活中解决问题的工具来考虑，不能任务式编程，就像吃饭睡觉一样，当成一个习惯。
-最大的问题：一定不要拖，不能拖。算法题不是值要脑子转得快，练是最重要的切记
+1. terminator
+2. process(split your big problem)
+3. drill down(subproblems)
+4. merge(subsult
+5. reverse status
 ```
-### <a name="2">第一节课</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-#### <a name="3">哈希表概念</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-1. 哈希表（Hash table），也叫散列表，是根据关键码值（Key value) 而直接进行访问的数据结构。
-2. 他通过吧关键码值映射到表中的一个位置来访问记录，以加快查找的速度。
-3. 这个映射函数叫做三裂函数（Hash Function）,存放记录的数组叫做哈希表（或散列表）
-
-#### <a name="4">四件套</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-1. clarification (搞清题目)
-2. possible solution --> optimal(time & space) （找最优化方式）
-3. code 
-4. test cases
-
-#### <a name="5">二叉树</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-##### <a name="6">概念：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-二叉树是n(n>=0)个结点的有限集合，该集合或者为空集（成为空二叉树），或者由一个 根结点和两棵互不相交。分别称为根结点的左子树右子树的二叉树组成。
-##### <a name="7">性质：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-1. 深度为k的二叉树，最多有 2^k - 1 个结点
-2. 二叉树的第i层最多有 2^(i - 1)个结点
-3. 在一棵二叉树中，如果叶子结点树为N0,度为2的结点数为N2，则有 N0 = N2 + 1
-  [推导过程](https://www.bilibili.com/video/BV1D541167LF/?spm_id_from=333.788.videocard.0)
-
-#### <a name="8">满二叉树</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-##### <a name="9">概念：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-在一个二叉树中，如果所有的分支节点都存在左子树和右子树，并且所有的叶子结点都在同一层上，这个树就是满二叉树。
-1. 叶子只能出现在最下一层
-2. 只有度为0和度为2的节点
-
-#### <a name="10">完全二叉树</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-##### <a name="11">概念：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-在满二叉树中，从最后一个结点开始，连续去掉任意个结点，即时一棵完全二叉树
-##### <a name="12">性质：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-1. 叶子结点只能出现在最下两层，且最下层的叶子结点都集中在二叉树的左面
-2. 完全二叉树中如果有度为1的结点，只可能有一个，且该结点只有左孩子
-3. 深度为k的完全二叉树在k-1层上，一定是满二叉树
-4. 在同样结点个树的二叉树中，完全二叉树的深度最小
-5. 对一个具有n个结点的完全二叉树中从1开始按层序编号，则
-   + 结点i的双亲结点为i/2
-   + 结点i的左孩子为2 * i
-   + 结点i的右孩子为2 * i + 1
-   
-#### <a name="13">二叉树的存储结构</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-1. 二叉链表有 n+ 1 个空指针 （2 * n）- (n - 1) 2 * n  是指针个数，n - 1 是边。
-2. 三叉链表（增加了指向双亲的指针）
-
-##### <a name="14">二叉树的层序遍历</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-###### <a name="15">非递归</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-伪代码
+## <a name="3">回溯的模版</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
-1. 队列Q初始化
-2. 如果二叉树非空，将根指针入队
-3. 循环直到队列Q为空
-   + q= 队列Q的对头元素出队
-   + 访问结点q的数据域
-   + 若q结点存在左孩子，则将左孩子的指针入队
-   + 若q结点存在有孩子，则将有孩子的指针入队
+res = []
+state = []
+p,q,r
+def backtrack(状态，条件1，条件2，...):
+    if 不满足合法条件（可以说剪枝）
+        return
+    elif 状态满足最终要求
+        res.append(state) 加入结果
+        return
+    主要递归过程，一般带有循环体，或者条件体
+    for 满足执行条件
+    if 满足执行条件
+       backtrack(状态，条件1，条件2，...)
+backtrack(状态，条件1，条件2，...)      
+return res 
 ```
-代码
-```
-def Bitree(self, root: BitreeNode):
-    if root == None:
-       retrun
-    queue.append(root)
-    while len(stack):
-        q = queue.popleft()
-        visit(q -> data)  
-        if q.left:
-           queue.append(q.left)
-        if q.right:
-           queue.append.(q.right)
-```
-##### <a name="16">二叉树的前序遍历</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-###### <a name="17">递归</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-伪代码
-```
-1. 若二叉树的根结点为空，则返回
-2. 访问根结点
-3. 前序遍历根结点的左子树
-4. 前序遍历根结点的右子树
-
-```
-代码
-```
-def preorder(self, root: BiNode):
-   if root == None:
-     return
-   else:
-      visit(root)
-      self.preorder(root)
-      self.preorder(root)
-```
-###### <a name="18">非递归</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-伪代码
-```
-1. 将堆栈stack初始化
-2. 循环，直到p为空且栈为空
-    2.1 当p不空时循环
-       2.1.1 访问p->data
-       2.1.2 将指针p的值保存到栈中
-       2.1.3 继续遍历p的左子树
-    2.2 如果栈不为空，则
-       2.2.1 将栈顶元素弹出至p
-       2.2.2 准备遍历p的右子树
-```
-代码
-```
-def preorder(self, root:BiNode):
-    stack = []
-    p = root
-    while p is not None || len(stack):
-        whle p:
-          visit(p)
-          p = stack.append(p)
-          p = p.left  
-        if stack is not None:
-          p = stack.pop()
-          p = p.right  
-```
-##### <a name="19">二叉树的中序遍历</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-###### <a name="20">递归 </a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-伪代码
-```
-1. 若二叉树的根结点为空，则返回
-2. 前序遍历根结点的左子树
-3. 访问根结点
-4.. 前序遍历右子树
-```
-代码
-```
-def inorder(self, root: TreeNode) -> List[int]:
-    if root is None:
-       return None
-    self.inorder(root.left)
-    visit(root.val)
-    self.inorder(root.right)
-
-``` 
-###### <a name="21">非递归 </a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-伪代码
-```
-1.将堆栈初始化
-2.循环，直到结点p和栈都不为空
-  2.1 循环，直到p为空
-      2.1.1 将指针p保存到栈中
-      2.1.2 继续遍历p的左子树
-  2.2 如果栈不为空
-      2.2.1 将栈顶元素弹出至p
-      2.2.2 访问p->data
-      2.2.3 准备遍历p的右子树
-```
-代码
-```
-def inorder(self, root: TreeNode) -> List[int]:
-    res = []
-    stack = []
-    q = root
-    while q | len(stack):
-         while q:
-              stack.append(q)
-              q = q.left
-         if len(stack):
-              q = stack.pop()
-              res.append(q.val)
-              q = q.right
-```
-
-##### <a name="22">二叉树的后续遍历</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-###### <a name="23">递归</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-伪代码
-```
-```
-代码
-```
-def postOrder(self, root: TreeNode) -> List[int]:
-     if root is None:
-         return None
-     self.postOrder(root.left)
-     self.postOrder(root.right)
-     res.append(root.val)    
-```
-###### <a name="24">非递归</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-伪代码
-```
-```
-代码
-```
-```
+## <a name="4">图示</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+![-w1413](media/15982561375067/15986786913919.jpg)
 
 
-#### <a name="25">二叉搜索树的特点</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-##### <a name="26">线索</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-概念：
-将二叉链表中的空指针域指向前驱结点或后继结点的指针称为线索
-##### <a name="27">线索化</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-概念：
-使二叉链表中结点的空链域存放前驱或后继信息的过程称为线索化
-##### <a name="28">线索链表</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-概念：
-加上线索的二叉链表称为线索链表（或线索二叉树）
-
-
-
-#### <a name="29">代码</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+#### <a name="5">代码</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 |题目|困难程度|完成次数|
 |--:|--:|--:|
-|[349.两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/)|1|1|
-|[59 - I. 滑动窗口的最大值](https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/)|1|1|
-|[258. 各位相加](https://leetcode-cn.com/problems/add-digits/)|1|1|
-|[412. Fizz Buzz](https://leetcode-cn.com/problems/fizz-buzz/)|1|1|
-|[242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)|1|1|
-|[104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)|1|1|
-|[94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)|1|1|
-|[144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)||0|
-|[590. N叉树的后序遍历](https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/)||0|
-|[589. N叉树的前序遍历](https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/description/)||0|
-|[429. N叉树的层序遍历](https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/)||0|
+|[剑指 Offer 40. 最小的k个数](https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/)|1|1|
+|[49. 字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)|1|1|
+|[剑指 Offer 05. 替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof)|1|1|
+|[剑指 Offer 06. 从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof)|1|1|
+|[剑指 Offer 68 - II. 二叉树的最近公共祖先](https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/)|1|1|
+|[15. 三数之和](https://leetcode-cn.com/problems/3sum/) |1|map方法不对，有重复|
+|[18. 四数之和](https://leetcode-cn.com/problems/4sum/)|1|1|
+|[1498. 满足条件的子序列数目](https://leetcode-cn.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/)|1|1|
+|[77. 组合](https://leetcode-cn.com/problems/combinations/)|1|1|
+|[46. 全排列](https://leetcode-cn.com/problems/permutations/)|1|1|
+|判断搜索二叉树|||
 
 
-##### <a name="30">349.两个数组的交集</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-[349.两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/)
+
+
+##### <a name="6">剑指 Offer 40. 最小的k个数</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+[剑指 Offer 40. 最小的k个数](https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/)
 ```
+ 参考链接 https://www.bilibili.com/video/BV1Eb41147dK?from=search&seid=10277900355091596982
+from typing import List
+import heapq
 class Solution:
-    from typing import List
-     map求解
-    def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        dict1 = {}
-        dict2 = {}
-        for i in range(len(nums1)):
-            dict1[nums1[i]] = i
-        for j in range(len(nums2)):
-            if nums2[j] in dict1:
-                dict2[nums2[j]] = j
+    def getLeastNumbers(self, arr: List[int], k: int) -> List[int]:
+        if k == 0:
+            return []
 
-        return dict2.keys()
+         系统堆
+        hp = [-x for x in arr[:k]]
+        heapq.heapify(hp)
+        for i in range(k, len(arr)):
+            if -hp[0] > arr[i]:
+                heapq.heappop(hp)
+                heapq.heappush(hp, -arr[i])
+        res = [-x for x in hp]
 
-     set求解
-    def intersectionSet(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        set1 = set(nums1)
-        set2 = set(nums2)
-        if len(nums1) < len(nums2):
-            return [x for x in set1 if x in set2]
-        else:
-            return [x for x in set2 if x in set1]
+         自定义堆
+         self.heapSort(arr)
+         res = arr[:k]
+        return res
+
+
+     堆排序
+    def heapSort(self,arr: List[int]):
+        self.buildHeap(arr,len(arr))
+        for i in range(len(arr) - 1, -1, -1):
+            temp = arr[i];
+            arr[i] = arr[0]
+            arr[0] = temp
+            self.buildHeap(arr,i)
+
+     生成一个堆
+    def buildHeap(self,arr: List[int],n:int):
+        lastNode = n - 1
+        parent = (lastNode - 1) // 2
+        for i in range(parent,-1,-1):
+            self.heapify(arr,n,i)
+
+    一开始写的heapify函数是从顶部开始向下的，所以会出现最大数在最底下冒不上来的情况，但是up写的第二个build_heap函数包含了heapify并且是从底层开始的，所以能生成堆
+    def heapify(self, arr: List[int], n: int, i: int):
+         recursion terminator
+        if i >= n:
+            return
+
+         procell login in current level
+        cr = 2 * i + 2
+        tempMax = i
+        cl = 2 * i + 1
+
+        if ((cl < n) and (arr[cl] > arr[tempMax])):
+            tempMax = cl
+        if ((cr < n) and (arr[cr] > arr[tempMax])):
+            tempMax = cr
+        if tempMax != i:
+            temp = arr[tempMax]
+            arr[tempMax] = arr[i]
+            arr[i] = temp
+            # <a name="7">dill down</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+            self.heapify(arr, n, tempMax)
 
 a = Solution()
-print(a.intersectionSet([1,4,4,6,7],[3,4,1,3,6]))
+print(a.getLeastNumbers([4,10,3,5,1,2],4))
 ```
-##### <a name="31">59 滑动窗口的最大值</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-[59 - I. 滑动窗口的最大值](https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/)
+##### <a name="8">49. 字母异位词分组</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+[49. 字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)
 ```
+from typing import List
 import collections
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        ans = collections.defaultdict(list)
+        for s in strs:
+            key = "".join(sorted(s))
+            ans[key].append(s)
+        return ans.values()
+
+
+
+         ans = collections.defaultdict(list)
+         for s in strs:
+             count = [0] * 26
+             for c in s:
+                 count[ord(c) - ord('a')] += 1
+             ans[tuple(count)].append(s)
+         return ans.values()
+
+
+a = Solution()
+print(a.groupAnagrams(["ate","eat","nta","atn","sdr"]))
+```
+
+##### <a name="9">剑指 Offer 05. 替换空格</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+[剑指 Offer 05. 替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof)
+```
+class Solution:
+    def replaceSpace(self, s: str) -> str:
+        s = s.replace(' ','20%')
+        # <a name="10">s = '20%'.join(s.split(' '))</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+        replaceS = ''
+        for idx, val in enumerate(s):
+            if val == ' ':
+                replaceS += '%20'
+            else:
+                replaceS += val
+        return replaceS
+a = Solution()
+print(a.replaceSpace("We are happy."))
+```
+#####剑指 Offer 06. 从尾到头打印链表
+[剑指 Offer 06. 从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof)
+```
+
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
 from typing import List
 class Solution:
-     双端队列的形式来解决
-    def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
-        if not nums or k == 0: return []
-        deque = collections.deque()
-        n, res = [], len(nums)
-        for i in range(k):
-            while deque and deque[-1] < nums[i]:
-                deque.pop()
-            deque.append(nums[i])
-        res = [deque[0]]
-        for i in range(k,  len(nums)):
-            if deque[0] == nums[i - k]:
-                deque.popleft()
-            while deque and deque[-1] < nums[i]:
-                deque.pop()
-            deque.append(nums[i])
-            res.append(deque[0])
-
-        return res
-
-     双端队列的形式来解决
-     思考 [i,j]为一个窗口, i - 1为窗口的前一个元素
-    def maxSlidingWindowTwo(self, nums: List[int], k: int) -> List[int]:
-        if not nums or k == 0: return []
-        deque = collections.deque()
+     反序遍历
+    def reversePrint(self, head: ListNode) -> List[int]:
         res = []
-        n = len(nums)
-        for i, j in zip(range(1 - k, n + 1 - k), range(n)):
-            if i > 0 and deque[0] == nums[i - 1]:
-                deque.pop()
-            while deque and deque[-1] < nums[j]:
-                deque.pop()
-            deque.append(nums[j])
-            if i >= 0:
-                res.append(deque[0])
+        self.helper(head, res)
+        res = res[::-1]
         return res
 
-     国际服
-     思考：问题的难点在于i - k代表什么，k - 1 代表什么
-     i- k 代表 （i - k, i] 是一个窗口  k - 1 是第一个窗口的右边界
-    def maxSlidingWindowInternational(self, nums, k):
-        d = collections.deque()
-        out = []
-        for i, n in enumerate(nums):
-            while d and nums[d[-1]] < n:
-                d.pop()
-            d += i,
-            if d[0] == i - k:
-                d.popleft()
-            if i >= k - 1:
-                out += nums[d[0]],
-        return out
+    def helper(self, head: ListNode, res: List[int]):
+         recursion terminator
+        if head == None:
+            return res
+
+         process login in current level
+        res.append(head.val)
+
+         drill down
+        self.helper(head.next, res)
+
+         reverse the current status if needed
+
+     创建链表
+    def createListMode(self,nums:List[int]) -> ListNode:
+        if len(nums) == 0:
+            return None
+        tempListNode = ListNode(-1)
+        head = ListNode(nums[0])
+        tempListNode.next = head
+        for i in range(1,len(nums)):
+            head.next = ListNode(nums[i])
+            head = head.next
+
+        return tempListNode.next
+a = Solution()
+head = a.createListMode([1,3,2,9,10])
+print(head)
+print(a.reversePrint(head))
+
+```
+##### <a name="11">剑指 Offer 68 - II. 二叉树的最近公共祖先</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+[剑指 Offer 68 - II. 二叉树的最近公共祖先](https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/)
+```
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+class Solution:
+    def lowestCommonAncestor(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
+        if root is None or root == q or root == p:
+            return root
+        left = self.lowestCommonAncestor(root.left,p,q)
+        right = self.lowestCommonAncestor(root.right,p,q)
+        if left and right:
+            return root
+        if left is None:
+            return right
+        if right is None:
+            return left  
+```
+
+##### <a name="12">15. 三数之和</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+[15. 三数之和](https://leetcode-cn.com/problems/3sum/) 
+```
+    def threeSumMap(self, nums: List[int]) -> List[List[int]]:
+        res = []
+        for first in range(len(nums)):
+            if first > 0 and nums[first] == nums[first - 1]:
+                continue
+            target = -nums[first]
+            dict = {}
+            for second in range(first + 1, len(nums)):
+                if second > first + 2 and nums[second] == nums[second - 1] and nums[second - 1] == nums[second - 2]:
+                    continue
+                value = target - nums[second]
+                if value in dict:
+                    res.append([nums[first], value, nums[second]])
+                dict[nums[second]] = second
+        return res
+```
+
+##### <a name="13">18. 四数之和</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+[18. 四数之和](https://leetcode-cn.com/problems/4sum/)
+```
+from typing import List
+class Solution:
+    def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
+        nums = sorted(nums)
+        res = []
+        for first in range(len(nums)):
+            if first > 0 and nums[first] == nums[first - 1]:
+                continue
+            for second in  range(first + 1, len(nums)):
+                if second > first + 1 and nums[second] == nums[second - 1]:
+                    continue
+                four = len(nums) - 1
+                for three in range(second + 1, len(nums)):
+                    if three > second + 1 and nums[three] == nums[three - 1]:
+                        continue
+                    while three < four and nums[second] + nums[three] + nums[four] + nums[first] > target:
+                        four -= 1
+                    if three == four:
+                        break
+                    if nums[second] + nums[three] + nums[four] + nums[first] == target:
+                        res.append([nums[first],nums[second],nums[three],nums[four]])
+        return res
 
 a = Solution()
-print(a.maxSlidingWindowInternational([5,8,3,4,5],2))
+print(a.fourSum([1,0,-1,0,-2,2],0))
 ```
+##### <a name="14">1498. 满足条件的子序列数目</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+[1498. 满足条件的子序列数目](https://leetcode-cn.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/)
+```
+from typing import List
+import bisect
+class Solution:
+    
+    def numSubseq(self, nums: List[int], target: int) -> int:
+        n = len(nums)
+        P = 10 ** 9 + 7
+        f = [1] + [0] * (n - 1)
+        for i in range(1, n):
+            f[i] = f[i - 1] * 2 % P
 
-##### <a name="32">94. 二叉树的中序遍历</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-[94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)
-```
-    递归
-    class Solution:
-        def inorderTraversal(self, root: TreeNode) -> List[int]:
-            res = []
-            self.helper(root,res)
-            return res
-        
-        def helper(self, root: TreeNode, res: List[int]) -> List[int]:
-            if root:
-                self.helper(root.left,res)
-                res.append(root.val)
-                self.helper(root.right,res)
+
+        nums.sort()
+        ans = 0
+        for i,num in enumerate(nums):
+            if 2 * nums[i] > target:
+                break
+            max = target - nums[i]
+            pos = bisect.bisect_right(nums,max) - 1
+            contribute = f[pos - i] if pos >= i else 0
+            ans += contribute
+        return  ans % P
+
+     双指针
+    def numSubseqDoublePointer(self, nums: List[int], target: int) -> int:
+        n = len(nums)
+        P = 10**9 + 7
+        f = [1] + [0] * (n - 1)
+        for i in range(1, n):
+            f[i] = f[i - 1] * 2 % P
+
+        ans = 0
+        nums.sort()
+        i = 0
+        j = n - 1
+        while i <= j:
+            if nums[i] + nums[j] > target:
+                j -= 1
             else:
-                return
-     维护一个栈           
-    class Solution:
-        def inorderTraversal(self, root: TreeNode) -> List[int]:
-            res = []
-            stack = []
-            curr = root
-            while curr or stack:
-               while curr:
-                   stack.append(curr)
-                   curr = curr.left
-               curr = stack.pop()
-               res.append(curr.val)
-               curr = curr.right   
-            return res   
-```
-##### <a name="33">258. 各位相加</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-[258. 各位相加](https://leetcode-cn.com/problems/add-digits/)
-```
-    class Solution:
-         循环
-        def addDigits(self, num: int) -> int:
-            while num > 10:
-                num = num // 10 + num % 10
-            return num
-    
-         递归
-        def addDigitsRecursion(self, num: int) -> int:
-    
-             recursion terminator
-            if num < 10:
-                return num
-    
-             process logic in current level
-            num = num // 10 + num % 10
-    
-             dill down
-            return self.addDigitsRecursion(num)
-    
-             reverse the current level status if needed
-    
-         模9
-        def addDigitsMold(self, num: int) -> int:
-            return (num - 1) % 9 + 1
-    
-    a = Solution()
-    print(a.addDigitsMold(456))
+                ans = (ans + f[j - i]) % P
+                i += 1
+
+        return ans
+
+
+
+a = Solution()
+print(a.numSubseqDoublePointer([5,2,4,1,7,6,8],16))
 ```
 
-##### <a name="34">242. 有效的字母异位词</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-[242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)
+#####77. 组合
+[77. 组合](https://leetcode-cn.com/problems/combinations/)
 ```
-    import collections
-    class Solution:
-         nlog(n)
-        def isAnagram(self, s: str, t: str) -> bool:
-            sl = "".join(sorted(list(s)))
-            tl = "".join(sorted(list(t)))
-            if sl == tl:
-                return True
-            else:
-                return False
-    
-         o(n) 存储索引
-        def isAnagramTwo(self, s: str, t: str) -> bool:
-            if len(s) != len(t):
-                return False
-            count = [0] * 26
-            for i in range(len(s)):
-               count[ord(s[i]) - ord('a')] += 1
-               count[ord(t[i]) - ord('a')] -= 1
-            for i in count:
-                if i != 0:
-                    return False
-            return True
-    
-         o(n)map
-        def isAnagramThree(self, s: str, t: str) -> bool:
-            if len(s) != len(t):
-                return False
-            count = collections.defaultdict(int)
-            for i in range(len(s)):
-                count[ord(s[i]) - ord('a')] += 1
-                count[ord(t[i]) - ord('a')] -= 1
-            for i in count.values():
-                if i != 0:
-                    return False
-            return True
-    a = Solution()
-    print(a.isAnagramThree("werty","wtyer"))
-```
-
-##### <a name="35">104. 二叉树的最大深度</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-[104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
-```
-    def maxDepth(self, root: TreeNode) -> int:
-        if root is None:
-            return 0
-        queue = collections.deque()
-        queue.append(root)
-        res = 0
-        while len(queue) != 0:
-            size = len(queue)
-            while size > 0:
-                node = queue.popleft()
-                if node.left:
-                    queue.append(node.left)
-                if node.right:
-                    queue.append(node.right)
-                size -= 1
-            res += 1
-
+class Solution:
+    def combine(self, n: int, k: int) -> List[List[int]]:
+        res = []
+        state = []
+        def backtrack(p,state):
+            if len(state) == k:
+                res.append(state[:])    
+            for i in range(p, n + 1):
+                state.append(i)
+                backtrack(i + 1, state)
+                state.pop()
+        backtrack(1, state)        
         return res
+    
+    应用了数学公式    
+    def combine(self, n: int, k: int) -> List[List[int]]:
+        res = []
+        if n < k or k <= 0:
+            return res
+        res = self.combine(n -1, k - 1)
+        if len(res) == 0:
+            res.append([])
+        for list in res:
+            list.append(n)
+        res = res + self.combine(n - 1, k)
+        return res        
 ```
 
+#####46. 全排列
+[46. 全排列](https://leetcode-cn.com/problems/permutations/)
+```
+from typing import List
+import collections
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        n = len(nums)
+        res = []
+        if n == 0:
+            return res
+        path = []
+        used = [0] * n
+        self.dfs(nums, n, 0, path, used, res)
+        return res
 
+    def dfs(self, nums: List[int], n: int, depth:int, path:List[int], used: List[bool], res: List[List[int]]):
+        if depth == n:
+            res.append(path.copy())
+            return ;
+        for i in range(n):
+            if used[i]:
+                continue
+            path.append(nums[i])
+            used[i] = True
+            self.dfs(nums, n, depth + 1, path, used, res)
+            path.pop()
+            used[i] = False
+
+a = Solution()
+print(a.permute([1,2]))
+```
