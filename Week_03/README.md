@@ -16,6 +16,11 @@
 &emsp;&emsp;&emsp;&emsp;<a href="#14">1498. 满足条件的子序列数目</a>  
 ## <a name="0">算法第三周</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ## <a name="1">感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+```
+1、多练多看多理解
+2、实在看不懂的就背下来
+
+```
 ## <a name="2">分治的思想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 1. terminator
@@ -59,7 +64,10 @@ return res
 |[1498. 满足条件的子序列数目](https://leetcode-cn.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/)|1|1|
 |[77. 组合](https://leetcode-cn.com/problems/combinations/)|1|1|
 |[46. 全排列](https://leetcode-cn.com/problems/permutations/)|1|1|
+|[105. 从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)|1|1|
+
 |判断搜索二叉树|||
+
 
 
 
