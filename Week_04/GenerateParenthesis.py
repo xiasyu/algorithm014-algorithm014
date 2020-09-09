@@ -35,16 +35,16 @@ class Solution:
         queue = collections.deque()
         queue.append(root)
         while len(queue) != 0:
+
             node = queue.popleft()
-            print(0)
             if node.left == 0 and node.right == 0:
                 res.append(node.s)
-                return res
-            if node.left > 0:
 
+            if node.left > 0:
                 listNode = ListNode(node.s + "(",node.left - 1,node.right)
                 queue.append(listNode)
-            elif node.right > node.left and node.right > 0:
+
+            if node.right > node.left and node.right > 0:
                 listNode = ListNode(node.s + ")",node.left,node.right - 1)
                 queue.append(listNode)
 
