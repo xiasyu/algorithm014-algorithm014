@@ -2,39 +2,37 @@ from typing import List
 from collections import deque
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
-        word_set = set(wordList)
-        if len(word_set) == 0 or endWord not in word_set:
+        if len(wordList) == 0 or endWord not in wordList:
             return 0
-
-        if beginWord in word_set:
-            word_set.remove(beginWord)
-
-        queue = deque()
-        queue.append(beginWord)
-        visited = set(beginWord)
+        wordListSet = set(wordList)
+        if beginWord in wordListSet:
+            wordListSet.remove(beginWord)
         word_len = len(beginWord)
+        q = deque()
+        q.append(beginWord)
+        visit = set(beginWord)
         step = 1
-        while queue:
-            current_size = len(queue)
-            for i in range(current_size):
-                word = queue.popleft()
 
-                word_list = list(word)
+        while q:
+            queuesize = len(q)
+            for i in range(queuesize):
+                visitWord = q.popleft()
+                visitWordList = list(visitWord)
                 for j in range(word_len):
-                    origin_char = word_list[j]
-
+                    origin_c = visitWordList[j]
                     for k in range(26):
-                        word_list[j] = chr(ord('a') + k)
-                        next_word = ''.join(word_list)
-                        if next_word in word_set:
-                            if next_word == endWord:
+                        visitWordList[j] = chr(ord('a')+ k)
+                        next_w = ''.join(visitWordList)
+                        if next_w in wordListSet:
+                            if next_w == endWord:
                                 return step + 1
-                            if next_word not in visited:
-                                queue.append(next_word)
-                                visited.add(next_word)
-                    word_list[j] = origin_char
+                            if next_w not in visit:
+                                q.append(next_w)
+                                visit.add(next_w)
+                    visitWordList[j] = origin_c
             step += 1
         return 0
+
 
 a = Solution()
 print(a.ladderLength("hit","cog",["hot","dot","dog","lot","log","cog"]))

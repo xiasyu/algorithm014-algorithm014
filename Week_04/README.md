@@ -6,24 +6,30 @@
 &emsp;<a href="#4">回溯的知识点：(讲的很好)</a>  
 &emsp;<a href="#5">剪枝</a>  
 &emsp;<a href="#6">图的最短路径</a>  
-&emsp;<a href="#7">DFS 代码递归写法</a>  
-&emsp;<a href="#8">DFS 代码非递归写法</a>  
-&emsp;<a href="#9">二分查找的代码模版(非递归)</a>  
-&emsp;<a href="#10">二分查找的代码模版(递归)</a>  
-&emsp;<a href="#11">题型二：Flood Fill</a>  
-&emsp;<a href="#12">题型三：字符串中的回溯问题</a>  
-&emsp;<a href="#13">题型四：游戏问题</a>  
-&emsp;&emsp;&emsp;<a href="#14">代码</a>  
-&emsp;&emsp;&emsp;<a href="#15">102. 二叉树的层序遍历</a>  
-&emsp;&emsp;&emsp;<a href="#16">33. 搜索旋转排序数组</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#17"> 搜索旋转排序数组的感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#18">22. 括号生成</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#19">全排列感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#20">47. 全排列 II</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#21">全排列 II感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#22">77. 组合</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#23">组合感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#24">560. 和为K的子数组</a>  
+&emsp;<a href="#7">能用双向广度优先遍历前提</a>  
+&emsp;<a href="#8">DFS 代码递归写法</a>  
+&emsp;<a href="#9">DFS 代码非递归写法</a>  
+&emsp;<a href="#10">二分查找的代码模版(非递归)</a>  
+&emsp;<a href="#11">二分查找的代码模版(递归)</a>  
+&emsp;<a href="#12">题型二：Flood Fill</a>  
+&emsp;<a href="#13">题型三：字符串中的回溯问题</a>  
+&emsp;<a href="#14">题型四：游戏问题</a>  
+&emsp;&emsp;&emsp;<a href="#15">代码</a>  
+&emsp;&emsp;&emsp;<a href="#16">102. 二叉树的层序遍历</a>  
+&emsp;&emsp;&emsp;<a href="#17">33. 搜索旋转排序数组</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#18"> 搜索旋转排序数组的感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#19">22. 括号生成</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#20">全排列感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#21">47. 全排列 II</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#22">全排列 II感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#23">77. 组合</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#24">组合感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#25">560. 和为K的子数组</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#26">127. 单词接龙</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#27">127. 单词接龙感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#28">874. 模拟行走机器人</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#29">169. 多数元素</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#30">455. 分发饼干</a>  
 ## <a name="0">第四周</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
 ## <a name="1">贪心算法：</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
@@ -40,10 +46,12 @@
 
 ## <a name="6">图的最短路径</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 使用广度优先搜索
+## <a name="7">能用双向广度优先遍历前提</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+要明确知道我们的起点和终点是什么
 
 
 
-## <a name="7">DFS 代码递归写法</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+## <a name="8">DFS 代码递归写法</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
 ```
 visited = set()
@@ -59,12 +67,12 @@ def dfs(self, node:TreeNode ,visited:List()):
         if next_mode is not in visited:
             self.dfs(next_node, visited)
 ```
-## <a name="8">DFS 代码非递归写法</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+## <a name="9">DFS 代码非递归写法</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 
 ```
 
-## <a name="9">二分查找的代码模版(非递归)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+## <a name="10">二分查找的代码模版(非递归)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 def binarySearch(self, nums: List[int], target: int) -> int:
     left,right = 0, n - 1
@@ -79,7 +87,7 @@ def binarySearch(self, nums: List[int], target: int) -> int:
                       
               
 ```
-## <a name="10">二分查找的代码模版(递归)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+## <a name="11">二分查找的代码模版(递归)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 def binarySearch(self, nums: List[int], target: int) -> int:
     return self.binarySearchHelper(nums,target,0,n - 1,(n - 1) // 2)
@@ -114,7 +122,7 @@ def binarySearchHelper(self, nums: List[int], target: int,left: int, right: int,
 90. 子集 II（中等）：剪枝技巧同 47 题、39 题、40 题；
 60. 第 k 个排列（中等）：利用了剪枝的思想，减去了大量枝叶，直接来到需要的叶子结点；
 93. 复原 IP 地址（中等）
-## <a name="11">题型二：Flood Fill</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+## <a name="12">题型二：Flood Fill</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 提示：Flood 是「洪水」的意思，Flood Fill 直译是「泛洪填充」的意思，体现了洪水能够从一点开始，迅速填满当前位置附近的地势低的区域。类似的应用还有：PS 软件中的「点一下把这一片区域的颜色都替换掉」，扫雷游戏「点一下打开一大片没有雷的区域」。
 
 下面这几个问题，思想不难，但是初学的时候代码很不容易写对，并且也很难调试。我们的建议是多写几遍，忘记了就再写一次，参考规范的编写实现（设置 visited 数组，设置方向数组，抽取私有方法），把代码写对。
@@ -125,7 +133,7 @@ def binarySearchHelper(self, nums: List[int], target: int,left: int, right: int,
 79. 单词搜索（中等）
 说明：以上问题都不建议修改输入数据，设置 visited 数组是标准的做法。可能会遇到参数很多，是不是都可以写成成员变量的问题，面试中拿不准的记得问一下面试官
 
-## <a name="12">题型三：字符串中的回溯问题</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+## <a name="13">题型三：字符串中的回溯问题</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 提示：字符串的问题的特殊之处在于，字符串的拼接生成新对象，因此在这一类问题上没有显示「回溯」的过程，但是如果使用 StringBuilder 拼接字符串就另当别论。
 在这里把它们单独作为一个题型，是希望朋友们能够注意到这个非常细节的地方。
 
@@ -133,7 +141,7 @@ def binarySearchHelper(self, nums: List[int], target: int,left: int, right: int,
 2. 字母大小写全排列（中等）；
 3. 括号生成（中等） ：这道题广度优先遍历也很好写，可以通过这个问题理解一下为什么回溯算法都是深度优先遍历，并且都用递归来写。
 
-## <a name="13">题型四：游戏问题</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+## <a name="14">题型四：游戏问题</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 回溯算法是早期简单的人工智能，有些教程把回溯叫做暴力搜索，但回溯没有那么暴力，回溯是有方向地搜索。「力扣」上有一些简单的游戏类问题，解决它们有一定的难度，大家可以尝试一下。
 
 51. N 皇后（困难）：其实就是全排列问题，注意设计清楚状态变量，在遍历的时候需要记住一些信息，空间换时间；
@@ -143,7 +151,7 @@ def binarySearchHelper(self, nums: List[int], target: int,left: int, right: int,
 
 
 
-#### <a name="14">代码</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+#### <a name="15">代码</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 |题目|困难程度|完成次数|
 |--:|--:|--:|
 |[102. 二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)|1|1|
@@ -151,8 +159,14 @@ def binarySearchHelper(self, nums: List[int], target: int,left: int, right: int,
 |[22. 括号生成](https://leetcode-cn.com/problems/generate-parentheses/)|1|1|
 |[46. 全排列](https://leetcode-cn.com/problems/permutations/)|1|1|
 |[47. 全排列 II](https://leetcode-cn.com/problems/permutations-ii/)|1|1|
+|[874. 模拟行走机器人](https://leetcode-cn.com/problems/walking-robot-simulation/)|1|1|
+|[单词接龙](https://leetcode-cn.com/problems/word-ladder/solution/yan-du-you-xian-bian-li-shuang-xiang-yan-du-you-2/)|1|1|
+|[169. 多数元素](https://leetcode-cn.com/problems/majority-element/)|1|1|
+|[455. 分发饼干](https://leetcode-cn.com/problems/assign-cookies/)|1|1|
 
-#### <a name="15">102. 二叉树的层序遍历</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+
+
+#### <a name="16">102. 二叉树的层序遍历</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 [102. 二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)
 ```
 class TreeNode:
@@ -246,7 +260,7 @@ print(a.levelOrder(root))
     
 ```
 
-#### <a name="16">33. 搜索旋转排序数组</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+#### <a name="17">33. 搜索旋转排序数组</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
 ```
 from typing import List
@@ -294,7 +308,7 @@ class Solution:
         return -1              
 
 ```
-##### <a name="17"> 搜索旋转排序数组的感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="18"> 搜索旋转排序数组的感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 第一种方式：
     
@@ -303,7 +317,7 @@ class Solution:
   
 
 ```
-##### <a name="18">22. 括号生成</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="19">22. 括号生成</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 [22. 括号生成](https://leetcode-cn.com/problems/generate-parentheses/)
 ```
     深度优先遍历
@@ -380,12 +394,12 @@ class Solution:
 a = Solution()
 print(a.permute([1,2,3]))
 ```
-###### <a name="19">全排列感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="20">全排列感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 注意：最终的执行方式还是递归，脑补递归的画面，一层一层往下走，直到给你一个信号 return，就开始一层一层往上返回，每层返回都会执行完整个函数题
 其实递归的过程跟上一个执行方法无关，是开辟了一个新的栈空间，一层递归一个新的栈空间。只有最后的栈空间调用结束，才会一层一层返回😄
 ```
-##### <a name="20">47. 全排列 II</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="21">47. 全排列 II</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 [47. 全排列 II](https://leetcode-cn.com/problems/permutations-ii/)
 ```
 class Solution:
@@ -414,12 +428,12 @@ class Solution:
             used[i] = False
             path.pop()         
 ```
-###### <a name="21">全排列 II感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="22">全排列 II感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 注意：
 剪枝剪去的是：跟前一个极点相同，并且前一个结点已经访问过，此时这个结点就不再访问，因为会跟之前的结点产生的叶子重复
 ```
-##### <a name="22">77. 组合</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="23">77. 组合</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 class Solution:
     def combine(self, n: int, k: int) -> List[List[int]]:
@@ -439,13 +453,13 @@ class Solution:
             self.dfs(n, k, depth + 1, res, path, i + 1)
             path.pop()
 ```
-###### <a name="23">组合感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="24">组合感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 注意：此处不使用used[bool]是因为begin已经排除了重复访问的可能
 
 ```
 
-##### <a name="24">560. 和为K的子数组</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="25">560. 和为K的子数组</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 [560. 和为K的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/)
 ```
 class Solution:
@@ -478,4 +492,137 @@ class Solution:
 
 ```
 
+##### <a name="26">127. 单词接龙</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+[127. 单词接龙](https://leetcode-cn.com/problems/word-ladder/)
+```
+from collections import deque
+class Solution:
+    def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
+        if len(wordList) == 0 or endWord not in wordList:
+            return 0
+        wordListSet = set(wordList)
+        if beginWord in wordListSet:
+            wordListSet.remove(beginWord)  # 这一步没懂
+         遍历过的单词
+        visit = set(beginWord)
+         广度优先遍历的队列
+        q = deque()
+         将开始的字符串加入到队列中
+        q.append(beginWord)
+         记录步骤
+        step = 1
+         每个单词的长度
+        n = len(beginWord)
+        
+         开始广度优先遍历
+        while len(q) != 0:
+            qSize = len(q)
+            for i in range(qSize):
+                currentVisitWord = q.popleft()
+                currentVisitWordList = list(currentVisitWord)
+                for j in range(n):
+                    origin_chr = currentVisitWordList[j]
+                    for k in range(26):
+                        currentVisitWordList[j] = chr(ord('a') + k)
+                        currentVisitWordChange = ''.join(currentVisitWordList)
+                        if currentVisitWordChange in wordListSet:
+                            if currentVisitWordChange == endWord:
+                                return step + 1
+                            if currentVisitWordChange not in visit:
+                                q.append(currentVisitWordChange)
+                                visit.add(currentVisitWordChange)
+                    currentVisitWordList[j] =  origin_chr
+            step += 1        
+        return 0                            
+        
+```
 
+##### <a name="27">127. 单词接龙感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+[参考链接](https://leetcode-cn.com/problems/word-ladder/solution/yan-du-you-xian-bian-li-shuang-xiang-yan-du-you-2/)
+```
+这道题是一个广度优先遍历的题
+思路：
+1、首先是用队列的形式进行遍历，类似于树的层序遍历
+2、改变其中一个字母后，遍历数组的集合，将包含的字母存入栈，这类似于树的第二层。第一层是根结点，也就是beginword
+3、关键：for循环 字母的长度，在此循环内遍历26个字母。
+```
+
+##### <a name="28">874. 模拟行走机器人</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+[874. 模拟行走机器人](https://leetcode-cn.com/problems/walking-robot-simulation/)
+```
+class Solution:
+    def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
+        obstaclesSet = set(map(tuple,obstacles))
+        dx = [0,1,0,-1]
+        dy = [1,0,-1,0]
+        x = y = di = 0
+        ans = 0
+
+        for com in commands:
+            if com == -2:
+                di = (di - 1) % 4
+            elif com == -1:
+                di = (di + 1) % 4
+            else:
+                for i in range(com):
+                    if (x + dx[di], y + dy[di]) not in obstaclesSet:
+                        x = x + dx[di]  
+                        y = y + dy[di]
+                        ans = max(ans, x * x + y * y)
+        return ans            
+```
+
+
+##### <a name="29">169. 多数元素</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+[169. 多数元素](https://leetcode-cn.com/problems/majority-element/)
+```
+from typing import List
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        n = len(nums)
+        halfN = n // 2
+        print(halfN)
+        dict = {}
+        for i in range(n):
+            currentNum = nums[i]
+            value = 1
+            if currentNum in dict:
+                value = dict[currentNum]
+                value += 1
+            if value > halfN:
+                return currentNum
+            dict[currentNum] = value
+            sorted()
+        return -1
+
+
+a = Solution()
+print(a.majorityElement( [1]))
+```
+##### <a name="30">455. 分发饼干</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+[455. 分发饼干](https://leetcode-cn.com/problems/assign-cookies/)
+```
+class Solution:
+    def findContentChildren(self, g: List[int], s: List[int]) -> int:
+        g = sorted(g)
+        s = sorted(s)
+        gn = len(g)
+        sn = len(s)
+        n = min(gn,sn)
+        num = 0
+        gindex = 0
+        sindex = 0
+        while gindex < gn and sindex < sn:
+            if g[gindex] > s[sindex]:
+                sindex += 1 
+            elif g[gindex] <= s[sindex]:
+                gindex += 1
+                sindex += 1
+                num += 1
+            
+        return num        
+                
+
+ 
+
+```
