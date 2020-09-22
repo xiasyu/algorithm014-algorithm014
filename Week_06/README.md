@@ -8,19 +8,20 @@
 &emsp;<a href="#6">递推</a>  
 &emsp;<a href="#7">学习方法</a>  
 &emsp;<a href="#8">动态规划小节</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#9">64. 最小路径和</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#10">64. 最小路径和感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#11">62.不同路径</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#12">62.不同路径感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#13">120.三角形最小路径和</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#14">分治</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#15">动态规划</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#16">53.最大子序列的和</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#17">152.乘积最大子序列</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#18">322. 零钱兑换</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#19">198. 打家劫舍</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#20">198. 打家劫舍感想</a>  
-
+&emsp;<a href="#9">滚动数组思想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#10">64. 最小路径和</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#11">64. 最小路径和感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#12">62.不同路径</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#13">62.不同路径感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#14">120.三角形最小路径和</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#15">分治</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#16">动态规划</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#17">53.最大子序列的和</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#18">152.乘积最大子序列</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#19">322. 零钱兑换</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#20">198. 打家劫舍</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#21">198. 打家劫舍感想</a>  
+[toc]
 ## <a name="0">第六周</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ## <a name="1">动态规划</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ## <a name="2">模版</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
@@ -79,9 +80,11 @@ def divide_conquer(problem, param1, param2...)
 1.打破自己的惯性思维，形成及其思维
 2.理解复杂逻辑的关键
 3.也是职业进阶的要点要领
+## <a name="9">滚动数组思想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
 
-##### <a name="9">64. 最小路径和</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+
+##### <a name="10">64. 最小路径和</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 [64. 最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/)
 ```
 from typing import List
@@ -111,7 +114,7 @@ print(a.minPathSum([
 
 ```
 
-###### <a name="10">64. 最小路径和感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="11">64. 最小路径和感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 时间复杂度：o(mn)
 1、这道题可以类比最大子序列
@@ -124,39 +127,100 @@ print(a.minPathSum([
    4) 当 i > 0 且 j > 0, dp[i][j] = min(dp[i - 1][j], dp[i][j - 1]) grid[i][j]
        
 ```
-##### <a name="11">62.不同路径</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="12">62.不同路径</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 [62.不同路径](https://leetcode-cn.com/problems/unique-paths/)
 ```
+from typing import List
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        dp = [[1] * n] + [[1] + [0] * (n - 1) for _ in range(m - 1)]
+        for i in range(1,m):
+            for j in range(1,n):
+                dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
+        return dp[m - 1][n - 1]
+
+
+a = Solution()
+print(a.uniquePaths(3,2))
 ```
-###### <a name="12">62.不同路径感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="13">62.不同路径感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 1.最优子结构：opt[n] = best_of(opt(n-1) , opt(n-2), ...)
 2.储存中间状态：opt[i]
 3.递推公式（美其名曰：状态转移方程或DP方程）
    Fib：opt[i] = opt[n - 1] + opt[n - 2]
    二维路径：opt[i,j] = opt[i + 1,j] + opt[i,j+1]且判断opt[i,j]是否是空地
+   
+   
 
 ```
-##### <a name="13">120.三角形最小路径和</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-###### <a name="14">分治</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+
+#####63. 不同路径 II
+[63. 不同路径 II](https://leetcode-cn.com/problems/unique-paths-ii/)
+```
+class Solution:
+    def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
+        
+        m = len(obstacleGrid)
+        if m == 0:
+            return 0
+        n = len(obstacleGrid[0])
+        dp = [[0] * n for _ in range(m)]
+
+        for i in range(m):
+            if obstacleGrid[i][0] == 0:
+                dp[i][0] = 1
+            else:
+                break
+
+        for j in range(n):
+            if obstacleGrid[0][j] == 0:
+                dp[0][j] = 1
+            else:
+                break
+
+        for a in range(1,m):
+            for k in range(1,n):
+                if obstacleGrid[a][k] == 0:
+                    dp[a][k] = dp[a - 1][k] + dp[a][k - 1]
+        return dp[m - 1][n - 1]
+```
+######63. 不同路径 II感想
+```
+此处需要注意：
+for i in range(m):
+            if obstacleGrid[i][0] == 0:
+                dp[i][0] = 1
+            else:
+                break
+
+        for j in range(n):
+            if obstacleGrid[0][j] == 0:
+                dp[0][j] = 1
+            else:
+                break
+仅当当前不为障碍的时候才能赋值为1，代表可以往下执行。否则直接跳出循环。因为有障碍，下面的都无法到达，所以要跳出循环                
+```
+##### <a name="14">120.三角形最小路径和</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="15">分治</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 python add_lrucache
 ```
 ```
 
-###### <a name="15">动态规划</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-##### <a name="16">53.最大子序列的和</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="16">动态规划</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="17">53.最大子序列的和</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 暴力法+分治发+DP
 ```
 ```
-##### <a name="17">152.乘积最大子序列</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="18">152.乘积最大子序列</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 ```
-##### <a name="18">322. 零钱兑换</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="19">322. 零钱兑换</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 广度优先遍历
 DP
 ```
 ```
-##### <a name="19">198. 打家劫舍</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="20">198. 打家劫舍</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 [198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/)
 ```
 class Solution:
@@ -183,7 +247,7 @@ class Solution:
             dp[i] = max(dp[i - 1], nums[i] + dp[i-2])
         return dp[n - 1]
 ```
-###### <a name="20">198. 打家劫舍感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="21">198. 打家劫舍感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 动态规划的步骤
 1、找到最优子结构
@@ -206,4 +270,29 @@ dp代表存储状态
     2.如果房子没被偷，那么 dp[i] = num[i] + dp[i - 2]
     3.之所以不考虑 dp[i - 3],dp[i - 4],其实这是子问题，dp[i - 2]肯定大与 dp[i - 3],dp[i - 4]。
     
+```
+
+#####213. 打家劫舍 II
+[213. 打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/)
+```
+from typing import List
+class Solution:
+    def robCycle(self, nums: List[int]) -> int:
+        def helper(nums:List[int]):
+            pre = 0
+            now = 0
+            for i in nums:
+                now, pre = max(pre + i, now), now
+            return now
+        return max(helper(nums[:-1]),helper(nums[1:])) if len(nums) != 1 else nums[0]
+
+
+
+
+a = Solution()
+print(a.robCycle([1,2,3,1]))
+```
+######213. 打家劫舍 II感想
+```
+重点：将第一个不被偷和最后一个不被偷拆分开来，拿到最大值
 ```
