@@ -8,13 +8,11 @@
 &emsp;&emsp;&emsp;&emsp;<a href="#6">300. 最长上升子序列</a>  
 &emsp;&emsp;&emsp;&emsp;&emsp;<a href="#7">300. 最长上升子序列感想</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#8">32. 最长有效括号(动态规划解法)</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#11">32. 最长有效括号(动态规划解法) 感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#12">32. 最长有效括号(栈的解法)</a>  
-<a href="#13">第三种方法 栈</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#14">32. 最长有效括号(栈的解法) 感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#15">32. 最长有效括号(正向逆向结合的解法</a>  
-<a href="#16">第四种方法 正向逆向结合法</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#17">32. 最长有效括号(正向逆向结合的解法)感想</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#9">32. 最长有效括号(动态规划解法) 感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#10">32. 最长有效括号(栈的解法)</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#11">32. 最长有效括号(栈的解法) 感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#12">32. 最长有效括号(正向逆向结合的解法</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#13">32. 最长有效括号(正向逆向结合的解法)感想</a>  
 
 # <a name="0">第九周</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 #### <a name="1">代码 </a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
@@ -210,10 +208,10 @@ class Solution:
 
 ##### <a name="8">32. 最长有效括号(动态规划解法)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
-#第二种动态规划的方法
+第二种动态规划的方法
     def longestValidParentheses1(self, s: str) -> int:
-        # <a name="9">首先找到状态转移方程</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-        # <a name="10">dp[i] = 2 + dp[i - 1] + dp[i - dp[i - 1] - 2]</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+         首先找到状态转移方程
+         dp[i] = 2 + dp[i - 1] + dp[i - dp[i - 1] - 2]
         n = len(s)
         if n < 2:
             return 0
@@ -223,7 +221,7 @@ class Solution:
                 dp[i] = 2 + dp[i - 1] + dp[i - dp[i-1] - 2]
         return max(dp)
 ```
-###### <a name="11">32. 最长有效括号(动态规划解法) 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="9">32. 最长有效括号(动态规划解法) 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 [参考链接](https://leetcode-cn.com/problems/longest-valid-parentheses/solution/zui-chang-you-xiao-gua-hao-by-leetcode-solution/)
 ```
 其实视频里讲的已经很详细了
@@ -244,9 +242,9 @@ class Solution:
 
 ```
 
-##### <a name="12">32. 最长有效括号(栈的解法)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="10">32. 最长有效括号(栈的解法)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
-# <a name="13">第三种方法 栈</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+ 第三种方法 栈
     def longestValidParentheses3(self, s: str) -> int:
         n = len(s)
         if n < 2:
@@ -265,7 +263,7 @@ class Solution:
                     max_length = max(length, max_length)
         return max_length
 ```
-###### <a name="14">32. 最长有效括号(栈的解法) 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="11">32. 最长有效括号(栈的解法) 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 时间复杂度为 o(n)
 首先在栈内添加 -1
@@ -277,9 +275,9 @@ class Solution:
 3、返回max_length   
 ```
 
-##### <a name="15">32. 最长有效括号(正向逆向结合的解法</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="12">32. 最长有效括号(正向逆向结合的解法</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
-# <a name="16">第四种方法 正向逆向结合法</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+ 第四种方法 正向逆向结合法
     def longestValidParentheses4(self, s: str) -> int:
         def lengthIndifferent(s, fromLeft) -> int:
             max_length = 0
@@ -314,7 +312,7 @@ class Solution:
 
         return max(max_from_left,max_from_right)
 ```
-###### <a name="17">32. 最长有效括号(正向逆向结合的解法)感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="13">32. 最长有效括号(正向逆向结合的解法)感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 正向逆向结合的思路
 1、正向开始，
