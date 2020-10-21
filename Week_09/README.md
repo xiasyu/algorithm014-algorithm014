@@ -8,8 +8,6 @@
 &emsp;&emsp;&emsp;&emsp;<a href="#6">300. 最长上升子序列</a>  
 &emsp;&emsp;&emsp;&emsp;&emsp;<a href="#7">300. 最长上升子序列感想</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#8">32. 最长有效括号(动态规划解法)</a>  
-<a href="#9">      # 首先找到状态转移方程</a>  
-<a href="#10">      # dp[i] = 2 + dp[i - 1] + dp[i - dp[i - 1] - 2]</a>  
 &emsp;&emsp;&emsp;&emsp;&emsp;<a href="#11">32. 最长有效括号(动态规划解法) 感想</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#12">32. 最长有效括号(栈的解法)</a>  
 <a href="#13">第三种方法 栈</a>  
