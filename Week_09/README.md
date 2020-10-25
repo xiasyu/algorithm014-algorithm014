@@ -6,42 +6,45 @@
 &emsp;&emsp;&emsp;&emsp;<a href="#4">746. 使用最小花费爬楼梯</a>  
 &emsp;&emsp;&emsp;&emsp;&emsp;<a href="#5">746. 使用最小花费爬楼梯 感想</a>  
 &emsp;&emsp;&emsp;&emsp;&emsp;<a href="#6">746. 使用最小花费爬楼梯 感想 </a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#7">300. 最长上升子序列</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#8">300. 最长上升子序列感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#9">91. 解码方法</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#10">91. 解码方法 感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#11">32. 最长有效括号（暴力解法）</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#12">32. 最长有效括号 （暴力解法） 感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#13">32. 最长有效括号(动态规划解法)</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#14">32. 最长有效括号(动态规划解法) 感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#15">32. 最长有效括号(栈的解法)</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#16">32. 最长有效括号(栈的解法) 感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#17">32. 最长有效括号(正向逆向结合的解法</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#18">32. 最长有效括号(正向逆向结合的解法)感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#19">84. 柱状图中最大的矩形(暴力解法)</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#20">84. 柱状图中最大的矩形(暴力解法) 感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#21">84. 柱状图中最大的矩形(单调栈解法)</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#22">84. 柱状图中最大的矩形(单调栈解法) 感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#23">85. 最大矩形（单调栈解法）</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#24">85. 最大矩形（单调栈解法）感想</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#25">85. 最大矩形（动态规划解法）</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#26">85. 最大矩形（动态规划解法） 感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#7">300. 最长上升子序列 (动态规划)</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#8">300. 最长上升子序列（动态规划） 感想 </a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#9">300. 最长上升子序列 (贪心 + 二分)</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#10">300. 最长上升子序列 (贪心 + 二分) 感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#11">91. 解码方法</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#12">91. 解码方法 感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#13">32. 最长有效括号（暴力解法）</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#14">32. 最长有效括号 （暴力解法） 感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#15">32. 最长有效括号(动态规划解法)</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#16">32. 最长有效括号(动态规划解法) 感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#17">32. 最长有效括号(栈的解法)</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#18">32. 最长有效括号(栈的解法) 感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#19">32. 最长有效括号(正向逆向结合）的解法</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#20">32. 最长有效括号(正向逆向结合的解法)感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#21">84. 柱状图中最大的矩形(暴力解法)</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#22">84. 柱状图中最大的矩形(暴力解法) 感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#23">84. 柱状图中最大的矩形(单调栈解法)</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#24">84. 柱状图中最大的矩形(单调栈解法) 感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#25">85. 最大矩形（单调栈解法）</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#26">85. 最大矩形（单调栈解法）感想</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#27">85. 最大矩形（动态规划解法）</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#28">85. 最大矩形（动态规划解法） 感想</a>  
 
 # <a name="0">第九周</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 #### <a name="1">代码 </a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 |题目|困难程度|完成次数|
 |--:|--:|--:|
-|[72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/)|1|1|
-|[746. 使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)|1|1|
-|[300. 最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)|1|1|
-|[91. 解码方法](https://leetcode-cn.com/problems/decode-ways/)|1|1|
-|[32. 最长有效括号(暴力解法)](https://leetcode-cn.com/problems/longest-valid-parentheses/)|1|1|
-|[32. 最长有效括号(动态规划解法)](https://leetcode-cn.com/problems/longest-valid-parentheses/)|1|1|
-|[32. 最长有效括号(栈的解法)](https://leetcode-cn.com/problems/longest-valid-parentheses/)|1|1|
-|[32. 最长有效括号(正向逆向结合的解法)](https://leetcode-cn.com/problems/longest-valid-parentheses/)|1|1|
-|[84. 柱状图中最大的矩形(暴力解法)](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)|1|1|
-|[84. 柱状图中最大的矩形(单调栈解法)](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)|1|1|
-|[85. 最大矩形(单调栈解法)](https://leetcode-cn.com/problems/maximal-rectangle/)|1|1|
+|[72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/)|1|2|
+|[746. 使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)|1|2|
+|[300. 最长上升子序列(动态规划)](https://leetcode-cn.com/problems/longest-increasing-subsequence/)|1|2|
+|[300. 最长上升子序列(贪心 + 二分查找)](https://leetcode-cn.com/problems/longest-increasing-subsequence/)|1|2|
+|[91. 解码方法](https://leetcode-cn.com/problems/decode-ways/)|1|2|
+|[32. 最长有效括号(暴力解法)](https://leetcode-cn.com/problems/longest-valid-parentheses/)|1|2|
+|[32. 最长有效括号(动态规划解法)](https://leetcode-cn.com/problems/longest-valid-parentheses/)|1|2|
+|[32. 最长有效括号(栈的解法)](https://leetcode-cn.com/problems/longest-valid-parentheses/)|1|2|
+|[32. 最长有效括号(正向逆向结合的解法)](https://leetcode-cn.com/problems/longest-valid-parentheses/)|1|2|
+|[84. 柱状图中最大的矩形(暴力解法)](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)|1|2|
+|[84. 柱状图中最大的矩形(单调栈解法)](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)|1|2|
+|[85. 最大矩形(单调栈解法)](https://leetcode-cn.com/problems/maximal-rectangle/)|1|2|
 
 
 
@@ -99,7 +102,7 @@ dp[i][j]代表word1 到i位置转换成word2到j位置需要最少步数
         return min(dp[-1] , dp[-2])  
     方法 二
     def minCostClimbingStairs(self, cost: List[int]) -> int:
-        首先得到最有状态转移方程
+         首先得到最有状态转移方程
         n = len(cost)
         dp = [0] * n
         dp[1] = min(cost[0],cost[1])
@@ -150,7 +153,7 @@ dp[i][j]代表word1 到i位置转换成word2到j位置需要最少步数
 ```
 
 
-##### <a name="7">300. 最长上升子序列</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="7">300. 最长上升子序列 (动态规划)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 [300. 最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
 ```
     时间复杂度为 0(n^2)
@@ -182,45 +185,81 @@ dp[i][j]代表word1 到i位置转换成word2到j位置需要最少步数
         return size   
 ```
 
-###### <a name="8">300. 最长上升子序列感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-[参考链接](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
+###### <a name="8">300. 最长上升子序列（动态规划） 感想 </a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+[参考链接](https://leetcode-cn.com/problems/longest-increasing-subsequence/solution/zui-chang-shang-sheng-zi-xu-lie-dong-tai-gui-hua-2/)
+[视频参考链接](https://www.bilibili.com/video/BV137411B7BN?from=search&seid=14029252552532980305)
 ```
-第一种方法：
-i > j
-1、建立数组长度的dp数组，存储为[1,1...]
+再次回顾，又有不同的感受，感觉之间的做法就形式比着题解抄了一遍。什么玩意儿
+1、这道题嵌套了两层for循环，就是将 第i个元素跟他之前的元素进行一一对比，累计第i个元素的最大子序列个数
+   dp = [1] * n
 
-2、两两比较，只要发现num[i]大于num[j]，则dp[i] = max(dp[j] + 1, dp[i])
-
-3、输出dp中的最大值 max(dp)即可
-   
+   for i in range(len(nums)):
+        fof j in range(i):
+            核心代码:
+            if nums[j] < num[i]:
+               dp类似于暂存状态，随着i和j元素的对比，dp[i]不断修改的过程
+               dp[i] = max(dp[i],dp[j] + 1)
+2. 取dp的最大值即可。（千万不要误以为这是累加的过程，有可能dp[-1]不是最大元素。因为这道题中逻辑上dp没有顺序）
 ```
 
-##### <a name="9">91. 解码方法</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="9">300. 最长上升子序列 (贪心 + 二分)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+```
+    def lengthOfLIS1(self, nums: List[int]) -> int:
+        n = len(nums)
+        length = 0
+        tail = {}
+        for i in range(n):
+            x = nums[i]
+            l = 0
+            r = length
+            while(l < r):
+                mid = (l + r + 1) // 2
+                if tail[mid] < x:
+                    l = mid
+                else:
+                    r = mid - 1
+            tail[l + 1] = x
+            length = max(length, l + 1)
+        return length
+```
+###### <a name="10">300. 最长上升子序列 (贪心 + 二分) 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+[参考链接](https://www.bilibili.com/video/BV1GA411B76a?from=search&seid=14029252552532980305)
+```
+这个方法有些巧妙
+核心思想是：看这个视频吧，好好看！
+```
+
+##### <a name="11">91. 解码方法</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 from typing import List
-class Solution:
     def numDecodings(self, s: str) -> int:
         n = len(s)
+        if n == 0:
+            return 0
         if s[0] == '0':
             return 0
-        dp = [0] * n
-        dp[0] = 1
-        for i in range(1,n):
-            if s[i] != '0':
-                dp[i] += dp[i - 1]
-            if s[i - 1] == '1' or (s[i - 1] == '2' and s[i] <= '6'):
-                if i - 2 >= 0:
-                    dp[i] += dp[i - 2]
+        dp = [0] * (n + 1)
+        for i in  range(1, n + 1):
+            if s[i] == '0':
+                if s[i - 1] == '1' or s[i - 1] == '2':
+                    dp[i + 1] = dp[i - 1]
                 else:
-                    dp[i] += 1
-        return dp[n - 1]
+                    return 0
+            else:
+                if s[i - 1] == '1' or (s[i - 1] == '2' and s[i] <= '6'):
+                    dp[i + 1] = dp[i] + dp[i - 1]
+                else:
+                    dp[i + 1] = dp[i]
+        return dp[-1]
 ```
 
-###### <a name="10">91. 解码方法 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="12">91. 解码方法 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
-没能太理解
+换了一种解法
+关于为什么 dp[0] = 1,dp[1] = 1 
+没理解，
 ```
-##### <a name="11">32. 最长有效括号（暴力解法）</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="13">32. 最长有效括号（暴力解法）</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 from typing import List
 class Solution:
@@ -254,7 +293,7 @@ class Solution:
         return 0
 ```
 
-###### <a name="12">32. 最长有效括号 （暴力解法） 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="14">32. 最长有效括号 （暴力解法） 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ``` 
 1、暴力解法利用了栈的原理，来判断字符串的合法性
 2、利用了合法的字符串为偶数的原理来从长到短遍历字符串
@@ -264,7 +303,7 @@ class Solution:
    4.合法即返回
 ```
 
-##### <a name="13">32. 最长有效括号(动态规划解法)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="15">32. 最长有效括号(动态规划解法)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 第二种动态规划的方法
     def longestValidParentheses1(self, s: str) -> int:
@@ -279,7 +318,7 @@ class Solution:
                 dp[i] = 2 + dp[i - 1] + dp[i - dp[i-1] - 2]
         return max(dp)
 ```
-###### <a name="14">32. 最长有效括号(动态规划解法) 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="16">32. 最长有效括号(动态规划解法) 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 [参考链接](https://leetcode-cn.com/problems/longest-valid-parentheses/solution/zui-chang-you-xiao-gua-hao-by-leetcode-solution/)
 ```
 其实视频里讲的已经很详细了
@@ -300,7 +339,7 @@ class Solution:
 
 ```
 
-##### <a name="15">32. 最长有效括号(栈的解法)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="17">32. 最长有效括号(栈的解法)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
  第三种方法 栈
     def longestValidParentheses3(self, s: str) -> int:
@@ -321,7 +360,7 @@ class Solution:
                     max_length = max(length, max_length)
         return max_length
 ```
-###### <a name="16">32. 最长有效括号(栈的解法) 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="18">32. 最长有效括号(栈的解法) 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 时间复杂度为 o(n)
 首先在栈内添加 -1
@@ -333,44 +372,37 @@ class Solution:
 3、返回max_length   
 ```
 
-##### <a name="17">32. 最长有效括号(正向逆向结合的解法</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="19">32. 最长有效括号(正向逆向结合）的解法</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
  第四种方法 正向逆向结合法
     def longestValidParentheses4(self, s: str) -> int:
-        def lengthIndifferent(s, fromLeft) -> int:
-            max_length = 0
-            left_num = 0
-            right_num = 0
-            if fromLeft == True:
-                for c in s:
-                    if c == '(':
-                        left_num += 1
-                    else:
-                        right_num += 1
-                    if left_num == right_num:
-                        max_length = max(max_length, 2 * left_num)
+        left = 0
+        right = 0
+        max_length = 0
+        for c in s:
+            if c == '(':
+                left += 1
+            else:
+                right += 1
+            if left == right:
+                max_length = max(max_length, 2 * right)
+            elif left < right:
+                left = right = 0
 
-                    elif right_num > left_num:
-                        right_num = left_num = 0
-            if fromLeft == False:
-                for c in s[::-1]:
-                    if c == '(':
-                        left_num += 1
-                    else:
-                        right_num += 1
-                    if left_num == right_num:
-                        max_length = max(max_length,2 * left_num)
-                    elif right_num < left_num:
-                        right_num = left_num = 0
-            return max_length
-
-
-        max_from_left = lengthIndifferent(s,True)
-        max_from_right = lengthIndifferent(s,False)
-
-        return max(max_from_left,max_from_right)
+        left = right = 0
+        
+        for c in s[::-1]:
+            if c == ')':
+                right += 1
+            else:
+                left += 1
+            if left == right:
+                max_length = max(max_length, 2 * left)
+            elif left > right:
+                left = right = 0   
+        return max_length
 ```
-###### <a name="18">32. 最长有效括号(正向逆向结合的解法)感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="20">32. 最长有效括号(正向逆向结合的解法)感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 正向逆向结合的思路
 1、正向开始，
@@ -383,7 +415,7 @@ class Solution:
    1. 如果出现了'('的个数大于')',则将')'和'('的个数置为0. 
 返回 max(max_length_left, max_length_right)
 ```
-##### <a name="19">84. 柱状图中最大的矩形(暴力解法)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="21">84. 柱状图中最大的矩形(暴力解法)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 [84. 柱状图中最大的矩形(暴力解法)](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)
 ```
 from typing import List
@@ -405,7 +437,7 @@ class Solution:
         return max_area
 ```
 
-###### <a name="20">84. 柱状图中最大的矩形(暴力解法) 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="22">84. 柱状图中最大的矩形(暴力解法) 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 时间复杂度为 o(n^2), 空间复杂度为 o(1)
 暴力解法其实就是固定高度，移动宽度的解法
@@ -416,7 +448,7 @@ class Solution:
  return max_area   
 
 ```
-##### <a name="21">84. 柱状图中最大的矩形(单调栈解法)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="23">84. 柱状图中最大的矩形(单调栈解法)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
  第二种方式 （单调栈）
     def largestRectangleArea1(self, heights: List[int]) -> int:
@@ -428,12 +460,13 @@ class Solution:
             while stack and heights[stack[-1]] > heights[idx_right]:
                 h_mid = heights[stack.pop()]
                 idx_left = stack[-1]
+                一定要记住这个边界问题 idx_right - idx_left - 1
                 res = max(res, h_mid * (idx_right - idx_left - 1))
             stack.append(idx_right)
         return res
 ```
 
-###### <a name="22">84. 柱状图中最大的矩形(单调栈解法) 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="24">84. 柱状图中最大的矩形(单调栈解法) 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 首先要在首位各自添加一个0元素，为了进行边界判断使用。因为原始数组中最左侧的元素没有左边界，最右侧的元素没有有边界
 关键点：向左向右找次小元素，正好符合单调栈的模式
@@ -446,7 +479,7 @@ class Solution:
 return max_area
 
 ```
-##### <a name="23">85. 最大矩形（单调栈解法）</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="25">85. 最大矩形（单调栈解法）</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 [85. 最大矩形](https://leetcode-cn.com/problems/maximal-rectangle/)
 ```
 from typing import List
@@ -482,7 +515,7 @@ class Solution:
             stack.append(idx_right)
         return max_area
 ```
-###### <a name="24">85. 最大矩形（单调栈解法）感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="26">85. 最大矩形（单调栈解法）感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
 其实是借用了 84题的完整代码
 1、循环矩阵的每一层,初始化存储当前层高度的数组heights
@@ -492,7 +525,7 @@ class Solution:
    3.叠加完成，将heights传入到最大矩形面积的方法中，max(max_area, self.largestRectangleArea(heights))
 retrun max_area    
 ```
-##### <a name="25">85. 最大矩形（动态规划解法）</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+##### <a name="27">85. 最大矩形（动态规划解法）</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
     m = len(matrix)
         if m == 0:
@@ -511,7 +544,7 @@ retrun max_area
         return max_area
 ```
 
-###### <a name="26">85. 最大矩形（动态规划解法） 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+###### <a name="28">85. 最大矩形（动态规划解法） 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 [参考链接](https://leetcode-cn.com/problems/maximal-rectangle/solution/zui-da-ju-xing-by-leetcode/)
 ```
 要理解此方法，首先要先理解暴力破解法
