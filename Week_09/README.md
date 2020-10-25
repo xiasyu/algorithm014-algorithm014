@@ -28,7 +28,13 @@
 &emsp;&emsp;&emsp;&emsp;&emsp;<a href="#26">85. 最大矩形（单调栈解法）感想</a>  
 &emsp;&emsp;&emsp;&emsp;<a href="#27">85. 最大矩形（动态规划解法）</a>  
 &emsp;&emsp;&emsp;&emsp;&emsp;<a href="#28">85. 最大矩形（动态规划解法） 感想</a>  
-
+&emsp;&emsp;&emsp;&emsp;<a href="#29">771. 宝石与石头(哈希解法)</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#30">709. 转换成小写字母</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#31">58. 最后一个单词的长度</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#32">387. 字符串中的第一个唯一字符</a>  
+&emsp;&emsp;&emsp;&emsp;<a href="#33">8. 字符串转换整数 (atoi)</a>  
+&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#34">8. 字符串转换整数 (atoi) 感想</a>  
+[toc]
 # <a name="0">第九周</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 #### <a name="1">代码 </a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 |题目|困难程度|完成次数|
@@ -45,6 +51,17 @@
 |[84. 柱状图中最大的矩形(暴力解法)](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)|1|2|
 |[84. 柱状图中最大的矩形(单调栈解法)](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)|1|2|
 |[85. 最大矩形(单调栈解法)](https://leetcode-cn.com/problems/maximal-rectangle/)|1|2|
+|[771. 宝石与石头(哈希解法)](https://leetcode-cn.com/problems/jewels-and-stones/)|1|1|
+|[709. 转换成小写字母](https://leetcode-cn.com/problems/to-lower-case/)|1|1|
+|[58. 最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/)|1|1|
+|[387. 字符串中的第一个唯一字符(哈希表的形式)](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)|1|1|
+|[387. 字符串中的第一个唯一字符(二叉搜索树 未实现)](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)|1|1|
+|[8. 字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)|1|1|
+
+
+
+
+
 
 
 
@@ -555,4 +572,91 @@ retrun max_area
    1.当前行往上遍历。但是这个遍历的过程我们取的是已经记录在dp中的最小值，就是当前行，当前列所能计算矩形面积的最大宽度。如果没理解，看官方吧😢
 3.不断更新max_area   
 
+```
+
+##### <a name="29">771. 宝石与石头(哈希解法)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+```
+def numJewelsInStones(self, J: str, S: str) -> int:
+        dia = set()
+        for i in J:
+            dia.add(i)
+        length = 0    
+        for j in S:
+            if j in dia:
+                length += 1
+        return length
+```
+
+##### <a name="30">709. 转换成小写字母</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+```
+class Solution:
+    def toLowerCase(self, str: str) -> str:
+        arr = []
+        for c in str:
+            if ord(c) <= 90 and ord(c) >= 65:
+                temp = chr(ord(c) + 32)
+                arr.append(temp)
+            else:
+                arr.append(c)
+        return ''.join(arr)
+```
+
+##### <a name="31">58. 最后一个单词的长度</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+```
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        count = 0
+        for c in s[::-1]:
+            if c == ' ' and count != 0:
+                return count
+            elif c == ' ':
+                continue
+            else:
+                count += 1
+                print(count)
+        return count
+```
+
+##### <a name="32">387. 字符串中的第一个唯一字符</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+```
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        dic = {}
+        for c in s:
+            if c in dic.keys():
+                dic[c] += 1
+            else:
+                dic[c] = 1
+        arr = list(s)
+        for key in dic.keys():
+            if dic[key] == 1:
+                return arr.index(key)
+        return -1 
+                   
+```
+
+##### <a name="33">8. 字符串转换整数 (atoi)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+```
+def myAtoi(self, s: str) -> int:
+        ls = list(s.strip())
+        n = len(ls)
+        if n == 0:
+            return 0
+        print(ls)
+        sign = -1 if ls[0] == '-' else 1
+        if ls[0] in ['-', '+'] : del ls[0]
+        res, i = 0, 0
+        while i < len(ls) and ls[i].isdigit():
+            res = res * 10 + (ord(ls[i]) - ord('0'))
+            i += 1
+        return max(-2 ** 31, min(res * sign, 2 ** 31 - 1)) 
+```
+
+###### <a name="34">8. 字符串转换整数 (atoi) 感想</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+```
+有几个想法是我比较难想到的
+1、如果首字母为' '，直接使用s.strip()将其删除
+2、直接定位正负号，并将其拿出来单独处理
+3、max(-2 ** 31,min(res * sign, 2 ** 31 - 1))
+这几个点弄清楚了，这道题就明白了。
 ```
